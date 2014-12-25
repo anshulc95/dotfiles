@@ -1,2 +1,2 @@
 set number
-colorscheme desert 
+colorscheme molokai 
