@@ -14,5 +14,9 @@ compinit
 # End of lines added by compinstall
 
 # User added
+autoload -U colors && colors
 autoload -U promptinit
 promptinit
+
+# aliases
+alias sp='sudo pacman -S'
