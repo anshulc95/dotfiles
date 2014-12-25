@@ -12,3 +12,7 @@ zstyle :compinstall filename '/home/ans/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
+
+# User added
+autoload -U promptinit
+promptinit
