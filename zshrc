@@ -2,12 +2,12 @@
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
-setopt autocd extendedglob
+setopt appendhistory autocd extendedglob
 unsetopt beep
 bindkey -v
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/ans/.zshrc'
+zstyle :compinstall filename '/home/anshul/.zshrc'
 
 autoload -Uz compinit
 compinit
@@ -15,8 +15,15 @@ compinit
 
 # User added
 autoload -U colors && colors
-autoload -U promptinit
+autoload -Uz promptinit
 promptinit
+prompt adam2
 
+zstyle ':completion:*' menu select
+#prevents from putting duplicate lines in history
+setopt HIST_IGNORE_DUPS
 # aliases
-alias sp='sudo pacman -S'
+set completealiases
+alias s='sudo pacman -S'
+alias e='exit'
+alias p='poweroff'
