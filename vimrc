@@ -1,55 +1,74 @@
 " Basic {{{
 set t_Co=256
 set nocompatible
-syntax enable
+filetype plugin indent on
+syntax on
+" set background=dark
 colorscheme molokai
-execute pathogen#infect()
-execute pathogen#helptags()
-"}}}
+" }}}
 " Options {{{
+
+" Tabs
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set smarttab
+
 set mouse=a
+set nowrap
+
+set backspace=indent,eol,start
+
+set noswapfile
+set nobackup
+
+set showcmd
+set showmatch
 set number
+set foldenable
 set foldmethod=marker
 set cursorline
-set background=dark
+
+" set list
+" set listchars=tab:▸\ ,eol:¬
+
+" wild menu
+set wildmenu
+set wildmode=longest:full
+
+" save when lose focus
+au FocusLost * :wa
+
+" Searchs
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+
+set autoindent
+set textwidth=79    " Maximum width of text that is being inserted. A longer
+                    " line will be broken after white space to get this width.
+
+set scrolloff=4
+set mouse=a
+" }}}
+" Map  pings {{{
+inoremap <leader><leader>  <Esc>
+inoremap <leader>p <esc>"+gPa
+inoremap <leader>w <esc>:w<cr>a
+inoremap <leader>q <esc>:wq<cr>
+
+nnoremap ; :
+nnoremap <space> za
+nnoremap <leader><space> :nohlsearch<CR>
+nnoremap q :wq!<cr>
+
+" UltiSnip
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+" move vertically by visual line
+nnoremap j gj
+nnoremap k gk
 "}}}
-" mappings {{{
-
-map ; :
-
-inoremap \w <esc>:w<cr>a
-inoremap \q <esc>:wq<cr>
-inoremap dd <esc>ddi
-inoremap \\ <esc>
-inoremap \p <esc>"+gPi
-
-nnoremap z za
-nnoremap \p "+gP
-nnoremap q :wq<cr>
-nnoremap <CR> i<CR><esc>
-  " Make the directory that contains the file in the current buffer.
-  " This is useful when you edit a file in a directory that doesn't
-  " (yet) exist
-  nmap <silent> <leader>md :!mkdir -p %:p:h<CR>
-" }}}
-" Tabstops {{{
-  set tabstop=2
-  set shiftwidth=2
-  set softtabstop=2
-  set autoindent
-  set smartindent
-  set expandtab
-" }}}
-" Search {{{
-  set incsearch
-  set ignorecase
-
-  " Toggle that stupid highlight search
-  nmap <silent> ,n :set invhls<CR>:set hls?<CR> 
-" }}}
-" Completion {{{
-  set wildmenu
-  set wildmode=longest,full,list
-
-  set ofu=syntaxcomplete#Complete
-" }}}

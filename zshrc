@@ -2,28 +2,53 @@
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
-setopt appendhistory autocd extendedglob
+setopt appendhistory
 unsetopt beep
 bindkey -v
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/anshul/.zshrc'
+zstyle :compinstall filename '/home/ans/.zshrc'
 
-autoload -Uz compinit
-compinit
 # End of lines added by compinstall
-
-# User added
-autoload -U colors && colors
-autoload -Uz promptinit
+autoload -U compinit promptinit
+compinit
 promptinit
-prompt adam2
 
+# for autocompletion with arrow-key driven interface
 zstyle ':completion:*' menu select
-#prevents from putting duplicate lines in history
-setopt HIST_IGNORE_DUPS
-# aliases
-set completealiases
-alias s='sudo pacman -S'
-alias e='exit'
-alias p='poweroff'
+
+# auto completion of aliases
+#setopt completealiases
+
+source .zsh_aliases
+
+# Set editor and terminal
+export EDITOR=vim
+export COLORTERM=rxvt-unicode-256color
+
+# Binds
+# Alt+x to insert sudo
+insert_sudo () { zle beginning-of-line; zle -U "sudo " }
+zle -N insert-sudo insert_sudo
+bindkey "^X" insert-sudo
+bindkey '^U' backward-kill-line
+bindkey '^A' beginning-of-line
+bindkey '^D' end-of-line
+bindkey -a 'gg' beginning-of-buffer-or-history
+
+bindkey "^["    vi-cmd-mode
+bindkey -M vicmd 'u' undo
+
+# prompt
+
+PROMPT=' %B%F{red}» %f'
+RPROMPT='%B%F{red}%~ %B%F{white}%#'
+# Color command correction promt
+#autoload -U colors && colors
+#export SPROMPT="$fg[cyan]Correct $fg[red]%R$reset_color $fg[magenta]to $fg[green]%r?$reset_color ($fg[white]YES :: NO :: ABORT :: EDIT$fg[white])"
+
+#Make sure to use UTF-8
+#export LC_ALL=en_US.UTF-8
+#export LANG=en_US.UTF-8
+#export LANGUAGE=en_US.UTF-8
+#export COLORTERM="YES"
