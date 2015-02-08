@@ -21,4 +21,4 @@ alias pacdl='sudo pacman -Sw'
 alias pacins='sudo pacman -U --asdeps'
 alias pacser='sudo pacman -Ss'
 
-alias gs='cd ~/dotfiles/ && git status && cd'
+alias gs='cd ~/dotfiles/ && git status'
