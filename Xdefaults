@@ -31,8 +31,8 @@ URxvt*color7  : #D3D7CF
 URxvt*color15 : #EEEEEC
 
 !urxvt settings:
-URxvt*font:                     xft:Oxygen Mono:pixelsize=13
-URxvt*boldFont:                 xft:Oxygen Mono:bold:pixelsize=13
+URxvt*font:                     xft:PragmataPro:pixelsize=13
+URxvt*boldFont:                 xft:PragmataPro:bold:pixelsize=13
 URxvt*scrollBar:                false
 URxvt*scrollBar_right:          true
 urxvt*transparent:              true
