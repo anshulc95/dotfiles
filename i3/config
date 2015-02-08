@@ -173,6 +173,7 @@ bindsym $alt+g exec gvim
 
 # Always floating
 for_window [class="Nitrogen" instance="nitrogen"] floating enable
+for_window [class="Glade-previewer" instance="glade-previewer"] floating enable
 
 bar {
         status_command i3status

@@ -1,0 +1,22 @@
+alias ls='ls --color=auto'
+alias ll='ls -l -a'
+
+alias vv='vim ~/.vimrc'
+alias vi='vim ~/.i3/config'
+alias vz='vim ~/.zshrc'
+alias vza='vim ~/.zsh_aliases'
+alias vx='vim ~/.Xdefaults'
+
+alias dd='cd ~/Downloads'
+alias e='exit'
+alias x='startx'
+alias md='mkdir'
+alias r='ranger'
+
+alias pacin='sudo pacman -S'
+alias pacrem='sudo pacman -Rns'
+alias pacc='sudo pacman -Scc'		#Clean cache
+alias pacupg='sudo pacman -Syu'
+alias pacdl='sudo pacman -Sw'
+alias pacins='sudo pacman -U --asdeps'
+alias pacser='sudo pacman -Ss'

@@ -6,6 +6,12 @@ syntax on
 " set background=dark
 colorscheme molokai
 " }}}
+" Pathogen {{{
+execute pathogen#infect()
+syntax on
+filetype plugin indent on
+call pathogen#helptags()
+" }}}
 " Options {{{
 
 " Tabs
@@ -21,6 +27,8 @@ set backspace=indent,eol,start
 
 set noswapfile
 set nobackup
+
+set encoding=utf-8
 
 set showcmd
 set showmatch

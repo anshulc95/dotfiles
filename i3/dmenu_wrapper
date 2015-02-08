@@ -1,0 +1,16 @@
+#!/bin/bash
+    #	-fn '-*-terminus-medium-r-normal-*-12-*-*-*-c-*-*-u' \
+
+dmenu_run \
+    -fn "Monospace-10:normal" \
+    -q \
+    -i \
+    -l 10 \
+	-x 10 \
+	-y 10 \
+	-h 20 \
+	-w 200 \
+	-nb \#ef2929 \
+	-nf \#eeeeec \
+	-sb \#eeeeec \
+	-sf \#ef2929
