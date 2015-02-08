@@ -181,23 +181,25 @@ bar {
 	#font -misc-tamsyn.icons-medium-*-normal-*-14-*-*-*-*-*-iso8859-*
 	font xft: tamsynmod 8
     #mode hide
-
+    
 colors {
-        background #d3d7cf
+#        background #252525
+	background #FFFFFF
         statusline #171717
-########################## border # back ## text ##################################################
-        focused_workspace  #ff2e00 #ff2e00 #ded7cf
-	active_workspace   #ffffff #333333 
-        inactive_workspace #d3d7cf #d3d7cf #171717
-        urgent_workspace   #ffffff #900000
-    }	
+			  #BORDER #BACKGROUND #TEXT
+#        focused_workspace #292929  #292929 #cccccc
+	focused_workspace #FFFFFF #FFFFFF #000000
+#        inactive_workspace #252525 #252525 #6b6b6b
+        inactive_workspace  #FFFFFF #FFFFFF #666666
+
+        urgent_workspace #b492b6 #b492b6 #cccccc
+    }
 }
 
 
-# colors
-#class				        border	backgr	text
-client.focused              #ff2e00 #ff2e00 #d3d7cf
-client.focused_inactive		#2e3436 #2e3436 #b9c8d1
-client.unfocused		    #2e3436 #2e3436 #999999
-client.urgent			    #cd989a #cd989a #2e3436
-client.background			#cf2929
+#class                      border   backgr.  text
+client.focused              #a5a5a5 #a5a5a5 #171717
+client.focused_inactive     #222222 #222222 #999999
+client.unfocused            #222222 #222222 #999999
+client.urgent               #a5a5a5 #a5a5a5 #2e3436
+client.background           #161616
