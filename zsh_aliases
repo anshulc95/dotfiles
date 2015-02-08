@@ -9,6 +9,7 @@ alias vx='vim ~/.Xdefaults'
 
 alias dd='cd ~/Downloads'
 alias e='exit'
+alias c='clear'
 alias x='startx'
 alias md='mkdir'
 alias r='ranger'
