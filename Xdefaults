@@ -5,7 +5,7 @@ URxvt*boldFont:                 xft:Ohsnap:bold:pixelsize=15
 URxvt*scrollBar:                false
 URxvt*scrollBar_right:          true
 urxvt*transparent:              true
-urxvt*shading:                  15
+urxvt*shading:                  5
 URxvt*cursorUnderline:          true
 URxvt*cursorBlink:              true
 
