@@ -108,8 +108,6 @@ nnoremap <space> za
 nnoremap <leader><space> :nohlsearch<CR>
 nnoremap q :wq!<cr>
 
-inoremap } }<esc>O
-
 " UltiSnip
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
