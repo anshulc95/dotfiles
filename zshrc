@@ -10,6 +10,11 @@ bindkey -v
 zstyle :compinstall filename '/home/ans/.zshrc'
 
 # End of lines added by compinstall
+#PATH="$(ruby -e 'print Gem./home/ans/.gem/ruby/2.2.0')/bin:$PATH"
+#export PATH="/home/ans/.gem/ruby/2.2.0/bin:$PATH"
+PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
+
+
 autoload -U compinit promptinit
 compinit
 promptinit
