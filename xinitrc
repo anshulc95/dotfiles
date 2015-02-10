@@ -15,4 +15,5 @@ fi
 # exec startkde
 # exec startxfce4
 exec i3
+# exec dwm
 # ...or the Window Manager of your choice
