@@ -1,8 +1,7 @@
-#include "/home/ans/dotfiles/colors/default"
+#include "/home/ans/dotfiles/colors/badwolf"
 
-!urxvt settings:
-URxvt*font:                     xft:PragmataPro:pixelsize=13
-URxvt*boldFont:                 xft:PragmataPro:bold:pixelsize=13
+URxvt*font:                     xft:Ohsnap:pixelsize=15
+URxvt*boldFont:                 xft:Ohsnap:bold:pixelsize=15
 URxvt*scrollBar:                false
 URxvt*scrollBar_right:          true
 urxvt*transparent:              true

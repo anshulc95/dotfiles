@@ -1,18 +1,55 @@
+" .vimrc
+" Author: Anshul Chauhan <anshulchauhan@outlook.com>
+" Source: http://github.com/anshulc95/dotfiles/
+" Patogen {{{
+
+filetype off
+call pathogen#infect()
+filetype plugin indent on
+set nocompatible
+
+" }}}
 " Basic {{{
 set t_Co=256
 set nocompatible
 filetype plugin indent on
 syntax on
-" set background=dark
-colorscheme molokai
-" }}}
-" Pathogen {{{
+set background=dark
+" }}}" Pathogen {{{
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
 call pathogen#helptags()
+colorscheme badwolf
+" }}}
+" Plugin settings {{{
+
+" NERDTree{{{
+noremap  <F2> :NERDTreeToggle<cr>
+inoremap <F2> <esc>:NERDTreeToggle<cr>
+
+" }}}
+
+" }}}
+" Functions {{{
+
+" Line Return {{{
+
+" Make sure Vim returns to the same line when you reopen a file.
+" Thanks, Amit, and Steve Losh
+augroup line_return
+    au!
+    au BufReadPost *
+        \ if line("'\"") > 0 && line("'\"") <= line("$") |
+        \     execute 'normal! g`"zvzz' |
+        \ endif
+augroup END
+
+" }}}
+
 " }}}
 " Options {{{
+set encoding=utf-8
 
 " Tabs
 set tabstop=4
@@ -60,7 +97,7 @@ set textwidth=79    " Maximum width of text that is being inserted. A longer
 set scrolloff=4
 set mouse=a
 " }}}
-" Map  pings {{{
+" Mappings {{{
 inoremap <leader><leader>  <Esc>
 inoremap <leader>p <esc>"+gPa
 inoremap <leader>w <esc>:w<cr>a
@@ -71,6 +108,8 @@ nnoremap <space> za
 nnoremap <leader><space> :nohlsearch<CR>
 nnoremap q :wq!<cr>
 
+inoremap } }<esc>O
+
 " UltiSnip
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
@@ -80,3 +119,9 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 nnoremap j gj
 nnoremap k gk
 "}}}
+" Quick editing ----------------------------------------------------------- {{{
+
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>ez :vsplit ~/.zshrc<cr>4j
+
+" }}}
