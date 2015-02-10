@@ -20,7 +20,7 @@ zstyle ':completion:*' menu select
 # auto completion of aliases
 #setopt completealiases
 
-source .zsh_aliases
+source ~/.zsh_aliases
 
 # Set editor and terminal
 export EDITOR=vim
