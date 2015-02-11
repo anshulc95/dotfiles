@@ -1,5 +1,5 @@
-alias ls='ls --color=auto'
-alias ll='ls -l -a'
+alias l='ls --color=auto -l'
+alias ll='ls --color=auto -l -a'
 
 alias vv='vim ~/.vimrc'
 alias vi='vim ~/.i3/config'

@@ -169,7 +169,7 @@ bindsym $mod+Shift+n move container to workspace next
 bindsym $mod+Shift+p move container to workspace prev
 
 bindsym $mod+c exec chromium
-bindsym $mod+p exec pcmanfm
+bindsym $mod+n exec nautilus
 bindsym $alt+Shift+r exec urxvt -e vim ~/.vimrc
 bindsym $alt+Shift+i exec urxvt -e vim ~/.i3/config
 bindsym $alt+Shift+x exec urxvt -e vim ~/.Xdefaults

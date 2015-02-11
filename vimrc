@@ -1,12 +1,14 @@
 " .vimrc
 " Author: Anshul Chauhan <anshulchauhan@outlook.com>
 " Source: http://github.com/anshulc95/dotfiles/
-" Patogen {{{
+" Preamble {{{
 
 filetype off
-call pathogen#infect()
+execute pathogen#infect()
 filetype plugin indent on
 set nocompatible
+syntax on
+call pathogen#helptags()
 
 " }}}
 " Basic {{{
@@ -15,12 +17,6 @@ set nocompatible
 filetype plugin indent on
 syntax on
 set background=dark
-" }}}" Pathogen {{{
-execute pathogen#infect()
-syntax on
-filetype plugin indent on
-call pathogen#helptags()
-colorscheme badwolf
 " }}}
 " Plugin settings {{{
 
@@ -29,6 +25,24 @@ noremap  <F2> :NERDTreeToggle<cr>
 inoremap <F2> <esc>:NERDTreeToggle<cr>
 
 " }}}
+
+" }}}
+" Color scheme {{{
+
+syntax on
+set background=dark
+let g:badwolf_tabline = 2
+let g:badwolf_html_link_underline = 0
+colorscheme badwolf
+
+" Reload the colorscheme whenever we write the file.
+augroup color_badwolf_dev
+    au!
+    au BufWritePost badwolf.vim color badwolf
+augroup END
+
+" Highlight VCS conflict markers
+match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'
 
 " }}}
 " Functions {{{
