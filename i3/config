@@ -180,6 +180,7 @@ bindsym $mod+u border none
 for_window [class="Nitrogen" instance="nitrogen"] floating enable
 for_window [class="Glade-previewer" instance="glade-previewer"] floating enable
 for_window [class="Xfce4-mixer" instance="xfce4-mixer"] floating enable
+for_window [class="A.out" instance="a.out"] floating enable
 
 bar {
         status_command i3status
@@ -191,7 +192,7 @@ bar {
 colors {
 #        background #252525
 	    background #141413
-        statusline #fade3e
+        statusline #8cffba
 			  #BORDER #BACKGROUND #TEXT
 #        focused_workspace #292929  #292929 #cccccc
 #	    focused_workspace #171717 #171717 #ef2929

@@ -16,7 +16,7 @@ alias md='mkdir'
 alias r='ranger'
 
 alias gtkcc='gcc `pkg-config --cflags gtk+-3.0 pkg-config --libs gtk+-3.0`'
-alias gmm='g++ `pkg-config gtkmm-2.4 --cflags --libs`'
+alias gtkmm='g++ `pkg-config gtkmm-2.4 --cflags --libs`'
 
 alias pacin='sudo pacman -S'
 alias pacrem='sudo pacman -Rns'
