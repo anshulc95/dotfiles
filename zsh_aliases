@@ -5,7 +5,9 @@ alias vv='vim ~/.vimrc'
 alias vi='vim ~/.i3/config'
 alias vz='vim ~/.zshrc'
 alias vza='vim ~/.zsh_aliases'
+
 alias vx='vim ~/.Xdefaults'
+alias xd='xrdb ~/.Xdefaults'
 
 alias dd='cd ~/Downloads'
 alias e='exit'

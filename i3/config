@@ -161,15 +161,13 @@ new_window 1pixel
 # Autostart
 exec --no-startup-id sh ~/.scripts/autostart.sh
 
-bindsym $mod+F1 exec i3lock -c 000000Z
-
 bindsym $mod+b workspace back_and_forth
 
 bindsym $mod+Shift+n move container to workspace next
 bindsym $mod+Shift+p move container to workspace prev
 
 bindsym $mod+c exec chromium
-bindsym $mod+n exec nautilus
+bindsym $mod+n exec pcmanfm
 bindsym $alt+Shift+r exec urxvt -e vim ~/.vimrc
 bindsym $alt+Shift+i exec urxvt -e vim ~/.i3/config
 bindsym $alt+Shift+x exec urxvt -e vim ~/.Xdefaults
@@ -192,7 +190,7 @@ bar {
 colors {
 #        background #252525
 	    background #141413
-        statusline #8cffba
+        statusline #0a9dff
 			  #BORDER #BACKGROUND #TEXT
 #        focused_workspace #292929  #292929 #cccccc
 #	    focused_workspace #171717 #171717 #ef2929
@@ -212,3 +210,7 @@ client.focused_inactive     #222222 #222222 #999999
 client.unfocused            #222222 #222222 #999999
 client.urgent               #a5a5a5 #a5a5a5 #2e3436
 client.background           #161616
+
+# Assign apps to workspaces
+assign [class="Chromium"] 2: web
+assign [class="Vlc"] 4: media

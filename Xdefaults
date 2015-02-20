@@ -1,7 +1,7 @@
 #include "/home/ans/dotfiles/colors/badwolf"
 
-URxvt*font:                     xft:Ohsnap:pixelsize=15
-URxvt*boldFont:                 xft:Ohsnap:bold:pixelsize=15
+URxvt*font:                     xft:Inconsolata:pixelsize=15
+URxvt*boldFont:                 xft:Inconsolata:bold:pixelsize=15
 URxvt*scrollBar:                false
 URxvt*scrollBar_right:          true
 urxvt*transparent:              false
