@@ -53,7 +53,7 @@ RPROMPT='%B%F{red}%~ %B%F{white}%#'
 #export SPROMPT="$fg[cyan]Correct $fg[red]%R$reset_color $fg[magenta]to $fg[green]%r?$reset_color ($fg[white]YES :: NO :: ABORT :: EDIT$fg[white])"
 
 #Make sure to use UTF-8
-#export LC_ALL=en_US.UTF-8
-#export LANG=en_US.UTF-8
-#export LANGUAGE=en_US.UTF-8
-#export COLORTERM="YES"
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
+export COLORTERM="YES"

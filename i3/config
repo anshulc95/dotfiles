@@ -178,6 +178,8 @@ bindsym $mod+u border none
 for_window [class="Nitrogen" instance="nitrogen"] floating enable
 for_window [class="Glade-previewer" instance="glade-previewer"] floating enable
 for_window [class="Xfce4-mixer" instance="xfce4-mixer"] floating enable
+for_window [class="Xfce4-appfinder" instance="xfce4-appfinder"] floating enable
+for_window [class="Orage" instance="orage"] floating enable
 for_window [class="A.out" instance="a.out"] floating enable
 
 bar {

@@ -1,10 +1,13 @@
 #include "/home/ans/dotfiles/colors/badwolf"
 
-URxvt*font:                     xft:Inconsolata:pixelsize=15
-URxvt*boldFont:                 xft:Inconsolata:bold:pixelsize=15
+URxvt*font:                     xft:EnvyCodeR:pixelsize=12
+URxvt*boldFont:                 xft:EnvyCodeR:bold:pixelsize=12
 URxvt*scrollBar:                false
 URxvt*scrollBar_right:          true
 urxvt*transparent:              false
-urxvt*shading:                  10
+urxvt*shading:                  15
 URxvt*cursorUnderline:          true
 URxvt*cursorBlink:              true
+urxvt*borderLess:               false
+urxvt*internalBorder:           0
+urxvt*externalBorder:           0
