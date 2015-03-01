@@ -4,10 +4,12 @@ URxvt*font:                     xft:EnvyCodeR:pixelsize=12
 URxvt*boldFont:                 xft:EnvyCodeR:bold:pixelsize=12
 URxvt*scrollBar:                false
 URxvt*scrollBar_right:          true
-urxvt*transparent:              false
-urxvt*shading:                  15
+!urxvt*transparent:              true
+!urxvt*shading:                  15
 URxvt*cursorUnderline:          true
 URxvt*cursorBlink:              true
 urxvt*borderLess:               false
 urxvt*internalBorder:           0
 urxvt*externalBorder:           0
+URxvt.depth: 32
+URxvt.background: rgba:1111/1111/1111/dddd
