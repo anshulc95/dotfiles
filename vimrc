@@ -48,44 +48,47 @@ set laststatus=2
 " }}}
 
 " }}}
-" Color scheme {{{
+" Badwolf Color scheme {{{
 
-syntax on
-set background=dark
-let g:badwolf_tabline = 2
-let g:badwolf_html_link_underline = 0
-colorscheme badwolf
+"syntax on
+"set background=dark
+"let g:badwolf_tabline = 2
+"let g:badwolf_html_link_underline = 0
+"colorscheme badwolf
 
-" Reload the colorscheme whenever we write the file.
-augroup color_badwolf_dev
-    au!
-    au BufWritePost badwolf.vim color badwolf
-augroup END
+"" Reload the colorscheme whenever we write the file.
+"augroup color_badwolf_dev
+    "au!
+    "au BufWritePost badwolf.vim color badwolf
+"augroup END
 
-" Highlight VCS conflict markers
-match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'
-
-" }}}
-" Functions {{{
-
-" Line Return {{{
-
-" Make sure Vim returns to the same line when you reopen a file.
-" Thanks, Amit, and Steve Losh
-augroup line_return
-    au!
-    au BufReadPost *
-        \ if line("'\"") > 0 && line("'\"") <= line("$") |
-        \     execute 'normal! g`"zvzz' |
-        \ endif
-augroup END
+"" Highlight VCS conflict markers
+"match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'
 
 " }}}
+"" Functions {{{
 
-" }}}
+"" Line Return {{{
+
+"" Make sure Vim returns to the same line when you reopen a file.
+"" Thanks, Amit, and Steve Losh
+"augroup line_return
+    "au!
+    "au BufReadPost *
+        "\ if line("'\"") > 0 && line("'\"") <= line("$") |
+        "\     execute 'normal! g`"zvzz' |
+        "\ endif
+"augroup END
+
+"" }}}
+
+"" }}}
 " Options {{{
 set encoding=utf-8
 
+" Gruvbox
+set background=dark
+colorscheme gruvbox
 " Tabs
 set tabstop=4
 set shiftwidth=4
@@ -109,8 +112,8 @@ set foldenable
 set foldmethod=marker
 set cursorline
 
-" set list
-" set listchars=tab:▸\ ,eol:¬
+ "set list
+ "set listchars=tab:▸\ ,eol:¬
 
 " wild menu
 set wildmenu
@@ -126,7 +129,7 @@ set ignorecase
 set smartcase
 
 set autoindent
-set textwidth=79    " Maximum width of text that is being inserted. A longer
+"set textwidth=79    " Maximum width of text that is being inserted. A longer
                     " line will be broken after white space to get this width.
 
 set scrolloff=4
