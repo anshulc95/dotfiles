@@ -168,10 +168,6 @@ bindsym $mod+Shift+p move container to workspace prev
 
 bindsym $mod+c exec chromium
 bindsym $mod+n exec pcmanfm
-bindsym $alt+Shift+r exec urxvt -e vim ~/.vimrc
-bindsym $alt+Shift+i exec urxvt -e vim ~/.i3/config
-bindsym $alt+Shift+x exec urxvt -e vim ~/.Xdefaults
-bindsym $alt+Shift+z exec urxvt -e vim ~/.zsh_aliases
 bindsym $mod+u border none
 
 # Always floating
@@ -181,6 +177,18 @@ for_window [class="Xfce4-mixer" instance="xfce4-mixer"] floating enable
 for_window [class="Xfce4-appfinder" instance="xfce4-appfinder"] floating enable
 for_window [class="Orage" instance="orage"] floating enable
 for_window [class="A.out" instance="a.out"] floating enable
+for_window [class="Tk" instance="tk"] floating enable
+
+# Colors
+# bar bg
+set $bg #282828
+# focused
+set $fg #fabd2f
+
+# window
+set $wb #fb4934
+
+
 
 bar {
         status_command i3status
@@ -191,15 +199,16 @@ bar {
     
 colors {
 #        background #252525
-	    background #141413
-        statusline #0a9dff
+	    background $bg
+        statusline #ebdbb2
 			  #BORDER #BACKGROUND #TEXT
 #        focused_workspace #292929  #292929 #cccccc
 #	    focused_workspace #171717 #171717 #ef2929
-	    focused_workspace #141413 #141413 #aeee00
+		#focused_workspace #fafafa #fafafa #000000
+		focused_workspace $bg $bg $fg
 #        inactive_workspace #252525 #252525 #6b6b6b
 #        inactive_workspace  #171717 #171717 #777777
-        inactive_workspace  #141413 #141413 #857f78
+        inactive_workspace $bg $bg #888888
 
         urgent_workspace #ef2929 #ef2929 #171717
     }
@@ -207,10 +216,10 @@ colors {
 
 
 #class                      border   backgr.  text
-client.focused              #0a9dff #0a9dff #141413
-client.focused_inactive     #222222 #222222 #999999
-client.unfocused            #222222 #222222 #999999
-client.urgent               #a5a5a5 #a5a5a5 #2e3436
+client.focused              $wb     $wb     $bg
+client.focused_inactive     #efefef #efefef #999999
+client.unfocused            $bg $bg  $fg
+client.urgent               #a5a5a5 #a5a5a5 #fafafa
 client.background           #161616
 
 # Assign apps to workspaces

@@ -1,15 +1,17 @@
-#include "/home/ans/dotfiles/colors/badwolf"
+#include "/home/ans/dotfiles/colors/gruvbox"
 
-URxvt*font:                     xft:EnvyCodeR:pixelsize=12
-URxvt*boldFont:                 xft:EnvyCodeR:bold:pixelsize=12
+URxvt*font:                     xft:FantasqueSansMono:pixelsize=13
+URxvt*boldFont:                 xft:FantasqueSansMono:bold:pixelsize=13
+
 URxvt*scrollBar:                false
 URxvt*scrollBar_right:          true
-!urxvt*transparent:              true
-!urxvt*shading:                  15
+urxvt*transparent:              false
+urxvt*shading:                  10
 URxvt*cursorUnderline:          true
 URxvt*cursorBlink:              true
 urxvt*borderLess:               false
 urxvt*internalBorder:           0
 urxvt*externalBorder:           0
-URxvt.depth: 32
-URxvt.background: rgba:1111/1111/1111/dddd
+!URxvt.depth: 32
+!URxvt.background: rgba:1111/1111/1111/dddd
+!URxvt.letterSpace: -2

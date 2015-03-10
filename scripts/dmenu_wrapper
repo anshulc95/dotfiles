@@ -2,15 +2,15 @@
     #	-fn '-*-terminus-medium-r-normal-*-12-*-*-*-c-*-*-u' \
 
 dmenu_run \
-    -fn "Ohsnap-10:normal" \
+    -fn "Ohsnap-12:bold" \
     -q \
     -i \
     -l 0 \
-	-x 10 \
-	-y 10 \
+	-x 0 \
+	-y 731 \
 	-h 20 \
-    -w 1345 \
-	-nb \#aeee00 \
-	-nf \#141413 \
-	-sb \#141413 \
-	-sf \#8cffba \
+    -w 1366 \
+	-nf \#fe8019 \
+	-nb \#282828 \
+	-sb \#8ec07c \
+	-sf \#282828 \

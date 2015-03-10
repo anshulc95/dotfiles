@@ -1,7 +1,10 @@
 " .vimrc
 " Author: Anshul Chauhan <anshulchauhan@outlook.com>
 " Source: http://github.com/anshulc95/dotfiles/
+
 " Preamble {{{
+
+set t_Co=256
 
 filetype off
 execute pathogen#infect()
@@ -10,13 +13,6 @@ set nocompatible
 syntax on
 call pathogen#helptags()
 
-" }}}
-" Basic {{{
-set t_Co=256
-set nocompatible
-filetype plugin indent on
-syntax on
-set background=dark
 " }}}
 " Plugin settings {{{
 
@@ -28,6 +24,8 @@ inoremap <F2> <esc>:NERDTreeToggle<cr>
 " Airline {{{
 set noshowmode
 set laststatus=2
+"let g:airline_theme = 'airlineish'
+"let g:airline_theme = 'sol'
   if !exists('g:airline_symbols')
     let g:airline_symbols = {}
   endif
@@ -45,8 +43,6 @@ set laststatus=2
   let g:airline_symbols.paste = 'Þ'
   let g:airline_symbols.paste = '∥'
   let g:airline_symbols.whitespace = 'Ξ'
-" }}}
-
 " }}}
 " Badwolf Color scheme {{{
 
@@ -66,29 +62,33 @@ set laststatus=2
 "match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'
 
 " }}}
-"" Functions {{{
 
-"" Line Return {{{
+" }}}
+" Functions {{{
 
-"" Make sure Vim returns to the same line when you reopen a file.
-"" Thanks, Amit, and Steve Losh
-"augroup line_return
-    "au!
-    "au BufReadPost *
-        "\ if line("'\"") > 0 && line("'\"") <= line("$") |
-        "\     execute 'normal! g`"zvzz' |
-        "\ endif
-"augroup END
+" Line Return {{{
 
-"" }}}
+" Make sure Vim returns to the same line when you reopen a file.
+" Thanks, Amit, and Steve Losh
+augroup line_return
+    au!
+    au BufReadPost *
+        \ if line("'\"") > 0 && line("'\"") <= line("$") |
+        \     execute 'normal! g`"zvzz' |
+        \ endif
+augroup END
 
-"" }}}
+" }}}
+
+" }}}
 " Options {{{
 set encoding=utf-8
 
-" Gruvbox
-set background=dark
+" gruvbox -dark
 colorscheme gruvbox
+
+set background=dark
+
 " Tabs
 set tabstop=4
 set shiftwidth=4
@@ -112,9 +112,6 @@ set foldenable
 set foldmethod=marker
 set cursorline
 
- "set list
- "set listchars=tab:▸\ ,eol:¬
-
 " wild menu
 set wildmenu
 set wildmode=longest:full
@@ -129,7 +126,7 @@ set ignorecase
 set smartcase
 
 set autoindent
-"set textwidth=79    " Maximum width of text that is being inserted. A longer
+set textwidth=83    " Maximum width of text that is being inserted. A longer
                     " line will be broken after white space to get this width.
 
 set scrolloff=4
@@ -163,4 +160,10 @@ nnoremap k gk
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>ez :vsplit ~/.zshrc<cr>4j
 
+" }}}
+" GUI {{{
+set guioptions-=m  "remove menu bar
+set guioptions-=T  "remove toolbar
+set guioptions-=r  "remove right-hand scroll bar
+set guioptions-=L  "remove left-hand scroll bar
 " }}}
