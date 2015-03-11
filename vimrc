@@ -143,6 +143,13 @@ nnoremap <space> za
 nnoremap <leader><space> :nohlsearch<CR>
 nnoremap q :wq!<cr>
 
+" Easy movements
+" By the way its much more easier to remember this way
+nnoremap H 0
+nnoremap L $
+nnoremap J L
+nnoremap K H
+
 " Matching the bash terminal behavior
 nnoremap <C-a> 0i
 
