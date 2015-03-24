@@ -107,8 +107,8 @@ bindsym $mod+5 workspace 5
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
+bindsym $mod+9 workspace 9: pdf
+bindsym $mod+0 workspace 10: gimp
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1: main
@@ -119,8 +119,8 @@ bindsym $mod+Shift+5 move container to workspace 5
 bindsym $mod+Shift+6 move container to workspace 6
 bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
-bindsym $mod+Shift+9 move container to workspace 9
-bindsym $mod+Shift+0 move container to workspace 10
+bindsym $mod+Shift+9 move container to workspace 9: pdf
+bindsym $mod+Shift+0 move container to workspace 10: gimp
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -178,6 +178,8 @@ for_window [class="Xfce4-appfinder" instance="xfce4-appfinder"] floating enable
 for_window [class="Orage" instance="orage"] floating enable
 for_window [class="A.out" instance="a.out"] floating enable
 for_window [class="Tk" instance="tk"] floating enable
+for_window [class="Galculator" instance="galculator"] floating enable
+#for_window [class="Pcmanfm" instance="pcmanfm"] floating enable
 
 # Colors
 # bar bg
@@ -198,26 +200,20 @@ bar {
     #mode hide
     
 colors {
-#        background #252525
 	    background $bg
         statusline #ebdbb2
-			  #BORDER #BACKGROUND #TEXT
-#        focused_workspace #292929  #292929 #cccccc
-#	    focused_workspace #171717 #171717 #ef2929
-		#focused_workspace #fafafa #fafafa #000000
-		focused_workspace $bg $bg $fg
-#        inactive_workspace #252525 #252525 #6b6b6b
-#        inactive_workspace  #171717 #171717 #777777
-        inactive_workspace $bg $bg #888888
+			                #BORDER #BACKGROUND #TEXT
+		focused_workspace   $bg     $bg         $fg
+        inactive_workspace  $bg     $bg         #888888
 
-        urgent_workspace #ef2929 #ef2929 #171717
+        urgent_workspace    $fg     $fg         $bg 
     }
 }
 
 
 #class                      border   backgr.  text
 client.focused              $wb     $wb     $bg
-client.focused_inactive     #efefef #efefef #999999
+client.focused_inactive     $bg $bg #999999
 client.unfocused            $bg $bg  $fg
 client.urgent               #a5a5a5 #a5a5a5 #fafafa
 client.background           #161616
@@ -225,3 +221,6 @@ client.background           #161616
 # Assign apps to workspaces
 assign [class="Chromium"] 2: web
 assign [class="Vlc"] 4: media
+assign [class="Gimp"] 10:gimp
+assign [class="Clementine"] 4: media
+assign [class="qpdfview"] 9: pdf

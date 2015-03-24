@@ -10,7 +10,7 @@ dmenu_run \
 	-y 731 \
 	-h 20 \
     -w 1366 \
-	-nf \#fe8019 \
-	-nb \#282828 \
-	-sb \#8ec07c \
-	-sf \#282828 \
+	-nf \#ebdbb2\
+	-nb \#cc241d \
+    -sb \#ebdbb2 \
+	-sf \#cc241d \

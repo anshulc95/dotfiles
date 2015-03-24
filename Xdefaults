@@ -6,7 +6,7 @@ URxvt*boldFont:                 xft:FantasqueSansMono:bold:pixelsize=13
 URxvt*scrollBar:                false
 URxvt*scrollBar_right:          true
 urxvt*transparent:              false
-urxvt*shading:                  10
+urxvt*shading:                  15
 URxvt*cursorUnderline:          true
 URxvt*cursorBlink:              true
 urxvt*borderLess:               false

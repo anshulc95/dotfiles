@@ -62,6 +62,9 @@ set laststatus=2
 "match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'
 
 " }}}
+" neocomplete{{{
+let g:neocomplete#enable_at_startup = 1
+" }}}
 
 " }}}
 " Functions {{{
@@ -133,10 +136,16 @@ set scrolloff=4
 set mouse=a
 " }}}
 " Mappings {{{
+
+nmap <F8> :TagbarToggle<CR>
+
 inoremap <leader><leader>  <Esc>
 inoremap <leader>p <esc>"+gPa
 inoremap <leader>w <esc>:w<cr>a
 inoremap <leader>q <esc>:wq<cr>
+inoremap <Leader>o <CR><Esc>O
+
+nnoremap <CR> 0i<CR><Esc>
 
 nnoremap ; :
 nnoremap <space> za
@@ -151,7 +160,7 @@ nnoremap J L
 nnoremap K H
 
 " Matching the bash terminal behavior
-nnoremap <C-a> 0i
+nnoremap <C-a> 0
 
 " UltiSnip
 let g:UltiSnipsExpandTrigger="<tab>"
