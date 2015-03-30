@@ -179,7 +179,7 @@ for_window [class="Orage" instance="orage"] floating enable
 for_window [class="A.out" instance="a.out"] floating enable
 for_window [class="Tk" instance="tk"] floating enable
 for_window [class="Galculator" instance="galculator"] floating enable
-#for_window [class="Pcmanfm" instance="pcmanfm"] floating enable
+for_window [class="Pcmanfm" instance="pcmanfm"] floating enable
 
 # Colors
 # bar bg

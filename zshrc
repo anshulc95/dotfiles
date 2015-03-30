@@ -44,10 +44,37 @@ bindkey -a 'gg' beginning-of-buffer-or-history
 bindkey "^["    vi-cmd-mode
 bindkey -M vicmd 'u' undo
 
+# timeout for ecs key
+export KEYTIMEOUT=1
+
+
 # prompt
 
 PROMPT=' %B%F{red}» %f'
 RPROMPT='%B%F{red}%~ %B%F{white}%#'
+
+#precmd() {
+  #RPROMPT=""
+#}
+#zle-keymap-select() {
+  #RPROMPT=""
+  #[[ $KEYMAP = vicmd ]] && RPROMPT="(CMD)"
+  #() { return $__prompt_status }
+  #zle reset-prompt
+#}
+#zle-line-init() {
+  #typeset -g __prompt_status="$?"
+#}
+#zle -N zle-keymap-select
+#zle -N zle-line-init
+
+
+#function zle-line-init zle-keymap-select {
+    #VIM_PROMPT="%{$fg_bold[yellow]%} [% NORMAL]% %{$reset_color%}"
+    #RPS1="${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins)/} $(git_custom_status) $EPS1"
+    #zle reset-prompt
+#}
+
 # Color command correction promt
 #autoload -U colors && colors
 #export SPROMPT="$fg[cyan]Correct $fg[red]%R$reset_color $fg[magenta]to $fg[green]%r?$reset_color ($fg[white]YES :: NO :: ABORT :: EDIT$fg[white])"

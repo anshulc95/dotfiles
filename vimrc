@@ -177,9 +177,3 @@ nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>ez :vsplit ~/.zshrc<cr>4j
 
 " }}}
-" GUI {{{
-set guioptions-=m  "remove menu bar
-set guioptions-=T  "remove toolbar
-set guioptions-=r  "remove right-hand scroll bar
-set guioptions-=L  "remove left-hand scroll bar
-" }}}
