@@ -17,7 +17,7 @@ set $alt Mod1
 # is used in the bar {} block below.
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:DejaVu Sans Mono 8
+font pango:DejaVu Sans Mono 8, FontAwesome 8
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 # The font above is very space-efficient, that is, it looks good, sharp and
@@ -98,29 +98,40 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
+set $WS1 
+set $WS2 
+set $WS3 
+set $WS4 4:
+set $WS5 5:
+set $WS6 6:
+set $WS7 7:
+set $WS8 8:
+set $WS9 9:
+set $WS10 10:
+
 # switch to workspace
-bindsym $mod+1 workspace 1: main
-bindsym $mod+2 workspace 2: web
-bindsym $mod+3 workspace 3: terms
-bindsym $mod+4 workspace 4: media
-bindsym $mod+5 workspace 5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9: pdf
-bindsym $mod+0 workspace 10: gimp
+bindsym Mod4+1 workspace $WS1
+bindsym Mod4+2 workspace $WS2
+bindsym Mod4+3 workspace $WS3
+bindsym Mod4+4 workspace $WS4
+bindsym Mod4+5 workspace $WS5
+bindsym Mod4+6 workspace $WS6
+bindsym Mod4+7 workspace $WS7
+bindsym Mod4+8 workspace $WS8
+bindsym Mod4+9 workspace $WS9
+bindsym Mod4+0 workspace $WS10
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1: main
-bindsym $mod+Shift+2 move container to workspace 2: web
-bindsym $mod+Shift+3 move container to workspace 3: terms
-bindsym $mod+Shift+4 move container to workspace 4: media
-bindsym $mod+Shift+5 move container to workspace 5
-bindsym $mod+Shift+6 move container to workspace 6
-bindsym $mod+Shift+7 move container to workspace 7
-bindsym $mod+Shift+8 move container to workspace 8
-bindsym $mod+Shift+9 move container to workspace 9: pdf
-bindsym $mod+Shift+0 move container to workspace 10: gimp
+bindsym Mod4+Shift+1 move container to workspace $WS1
+bindsym Mod4+Shift+2 move container to workspace $WS2
+bindsym Mod4+Shift+3 move container to workspace $WS3
+bindsym Mod4+Shift+4 move container to workspace $WS4
+bindsym Mod4+Shift+5 move container to workspace $WS5
+bindsym Mod4+Shift+6 move container to workspace $WS6
+bindsym Mod4+Shift+7 move container to workspace $WS7
+bindsym Mod4+Shift+8 move container to workspace $WS8
+bindsym Mod4+Shift+9 move container to workspace $WS9
+bindsym Mod4+Shift+0 move container to workspace $WS10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -156,7 +167,8 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 #turns off title bar
-new_window 1pixel
+#new_window 1pixel
+new_window none
 
 # Autostart
 exec --no-startup-id sh ~/.scripts/autostart.sh
@@ -168,7 +180,7 @@ bindsym $mod+Shift+p move container to workspace prev
 
 bindsym $mod+c exec chromium
 bindsym $mod+n exec pcmanfm
-bindsym $mod+u border none
+#bindsym $mod+u border none
 
 # Always floating
 for_window [class="Nitrogen" instance="nitrogen"] floating enable
@@ -183,9 +195,9 @@ for_window [class="Pcmanfm" instance="pcmanfm"] floating enable
 
 # Colors
 # bar bg
-set $bg #282828
+set $bg #ebdbb2
 # focused
-set $fg #fabd2f
+set $fg #282828
 
 # window
 set $wb #fb4934
@@ -196,15 +208,15 @@ bar {
         status_command i3status
 	position bottom
 	#font -misc-tamsyn.icons-medium-*-normal-*-14-*-*-*-*-*-iso8859-*
-	font xft: Ohsnap 8
+	font xft: Ohsnap 10
     #mode hide
     
 colors {
 	    background $bg
-        statusline #ebdbb2
+        statusline $fg
 			                #BORDER #BACKGROUND #TEXT
 		focused_workspace   $bg     $bg         $fg
-        inactive_workspace  $bg     $bg         #888888
+        inactive_workspace  $bg     $bg         #666666
 
         urgent_workspace    $fg     $fg         $bg 
     }
@@ -219,8 +231,13 @@ client.urgent               #a5a5a5 #a5a5a5 #fafafa
 client.background           #161616
 
 # Assign apps to workspaces
-assign [class="Chromium"] 2: web
-assign [class="Vlc"] 4: media
-assign [class="Gimp"] 10:gimp
-assign [class="Clementine"] 4: media
-assign [class="qpdfview"] 9: pdf
+assign [class="Chromium"] $WS2
+assign [class="Vlc"] $WS4
+assign [class="Gimp"] $WS10
+assign [class="Clementine"] $WS4
+assign [class="qpdfview"] $WS9
+
+#gaps inner 5
+#gaps outer 5
+
+#vim:filetype=i3

@@ -1,7 +1,7 @@
-#include "/home/ans/dotfiles/colors/gruvbox"
+#include "/home/anshul/dotfiles/colors/gruvbox"
 
-URxvt*font:                     xft:FantasqueSansMono:pixelsize=13
-URxvt*boldFont:                 xft:FantasqueSansMono:bold:pixelsize=13
+URxvt*font:                     xft:FantasqueSansMono:pixelsize=16
+URxvt*boldFont:                 xft:FantasqueSansMono:bold:pixelsize=16
 
 URxvt*scrollBar:                false
 URxvt*scrollBar_right:          true

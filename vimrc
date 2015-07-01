@@ -2,16 +2,34 @@
 " Author: Anshul Chauhan <anshulchauhan@outlook.com>
 " Source: http://github.com/anshulc95/dotfiles/
 
-" Preamble {{{
+" Vundle & Startups {{{
 
-set t_Co=256
 
-filetype off
-execute pathogen#infect()
-filetype plugin indent on
 set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'gmarik/Vundle.vim'
+
+" Plugins {{{
+Plugin 'tpope/vim-fugitive'
+Plugin 'sjl/badwolf'
+Plugin 'tpope/vim-vividchalk'
+Plugin 'itchyny/landscape.vim'
+Plugin 'mattn/emmet-vim'
+Plugin 'PotatoesMaster/i3-vim-syntax'
+Plugin 'bling/vim-airline'
+Plugin 'scrooloose/nerdtree'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'easymotion/vim-easymotion'
+"}}}
+ 
+call vundle#end()
+filetype plugin indent on
 syntax on
-call pathogen#helptags()
+set t_Co=256
 
 " }}}
 " Plugin settings {{{
@@ -25,7 +43,7 @@ inoremap <F2> <esc>:NERDTreeToggle<cr>
 set noshowmode
 set laststatus=2
 "let g:airline_theme = 'airlineish'
-"let g:airline_theme = 'sol'
+let g:airline_theme = 'tomorrow'
   if !exists('g:airline_symbols')
     let g:airline_symbols = {}
   endif
