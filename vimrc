@@ -14,14 +14,13 @@ Plugin 'gmarik/Vundle.vim'
 
 " Plugins {{{
 Plugin 'tpope/vim-fugitive'
+Plugin 'Raimondi/delimitMate'
+Plugin 'Yggdroot/indentLine'
 Plugin 'sjl/badwolf'
-Plugin 'tpope/vim-vividchalk'
-Plugin 'itchyny/landscape.vim'
-Plugin 'mattn/emmet-vim'
+Plugin 'tpope/vim-surround'
 Plugin 'PotatoesMaster/i3-vim-syntax'
 Plugin 'bling/vim-airline'
 Plugin 'scrooloose/nerdtree'
-Plugin 'altercation/vim-colors-solarized'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'easymotion/vim-easymotion'
 "}}}
@@ -106,7 +105,7 @@ augroup END
 set encoding=utf-8
 
 " gruvbox -dark
-colorscheme gruvbox
+colorscheme argonaut
 
 set background=dark
 
