@@ -1,17 +1,49 @@
-#include "/home/anshul/dotfiles/colors/gruvbox"
+!#include "/home/anshul/dotfiles/colors/mocha"
 
-URxvt*font:                     xft:FantasqueSansMono:pixelsize=16
-URxvt*boldFont:                 xft:FantasqueSansMono:bold:pixelsize=16
+!URxvt*font:                     xft:Hermit:pixelsize=17
+!URxvt*boldFont:                 xft:Hermit:pixelsize=17
+URxvt*font:                     xft:FantasqueSansMono:pixelsize=17
+URxvt*boldFont:                 xft:FantasqueSansMono:bold:pixelsize=17
+URxvt*italicFont::              xft:FantasqueSansMono:italic:pixelsize=17:antialias=true:italic:autohint=true:hinting=true
+URxvt*bolditalicFont::          xft:FantasqueSansMono:bold:italic:pixelsize=17:antialias=true:bold:italic:autohint=true:hinting=true
 
 URxvt*scrollBar:                false
 URxvt*scrollBar_right:          true
 urxvt*transparent:              false
-urxvt*shading:                  15
-URxvt*cursorUnderline:          true
+urxvt*shading:                  5
+URxvt*cursorUnderline:          false
 URxvt*cursorBlink:              true
 urxvt*borderLess:               false
 urxvt*internalBorder:           0
 urxvt*externalBorder:           0
+
+!URxvt.transparent:true
+!URxvt.shading:shading:20
 !URxvt.depth: 32
 !URxvt.background: rgba:1111/1111/1111/dddd
 !URxvt.letterSpace: -2
+
+! zenburn
+!URxvt*termName: rxvt-256color
+!URxvt*xftAntialias: true
+!URxvt*background: #3f3f3f
+!URxvt*foreground: #dcdccc
+!URxvt*cursorColor: #aaaaaa
+!URxvt*colorUL: #366060
+!URxvt*underlineColor: #dfaf8f
+!URxvt*color0: #3f3f3f
+!URxvt*color1: #cc9393
+!URxvt*color2: #7f9f7f
+!URxvt*color3: #d0bf8f
+!URxvt*color4: #6ca0a3
+!URxvt*color5: #dc8cc3
+!URxvt*color6: #93e0e3
+!URxvt*color7: #dcdccc
+!URxvt*color8: #000000
+!URxvt*color9: #dca3a3
+!URxvt*color10: #bfebbf
+!URxvt*color11: #f0dfaf
+!URxvt*color12: #8cd0d3
+!URxvt*color13: #dc8cc3
+!URxvt*color14: #93e0e3
+!URxvt*color15: #ffffff

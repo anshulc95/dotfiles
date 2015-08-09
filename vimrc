@@ -13,21 +13,28 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " Plugins {{{
-Plugin 'tpope/vim-fugitive'
 Plugin 'Raimondi/delimitMate'
-Plugin 'Yggdroot/indentLine'
-Plugin 'sjl/badwolf'
 Plugin 'tpope/vim-surround'
+Plugin 'morhetz/gruvbox'
 Plugin 'PotatoesMaster/i3-vim-syntax'
 Plugin 'bling/vim-airline'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+Plugin 'chriskempson/base16-vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'easymotion/vim-easymotion'
+Plugin 'kien/ctrlp.vim'
+Plugin 'tpope/vim-fugitive'
 "}}}
  
 call vundle#end()
 filetype plugin indent on
 syntax on
+
+"let g:gruvbox_termcolors=16 " to achieve better colors, especially red, might
+							" produce strange colors in terminals other than
+							" rxvt
 set t_Co=256
 
 " }}}
@@ -41,10 +48,9 @@ inoremap <F2> <esc>:NERDTreeToggle<cr>
 " Airline {{{
 set noshowmode
 set laststatus=2
-"let g:airline_theme = 'airlineish'
-let g:airline_theme = 'tomorrow'
+"let g:airline_theme = 'powerlineish'
   if !exists('g:airline_symbols')
-    let g:airline_symbols = {}
+	let g:airline_symbols = {}
   endif
 
   " unicode symbols
@@ -61,27 +67,7 @@ let g:airline_theme = 'tomorrow'
   let g:airline_symbols.paste = '∥'
   let g:airline_symbols.whitespace = 'Ξ'
 " }}}
-" Badwolf Color scheme {{{
-
-"syntax on
-"set background=dark
-"let g:badwolf_tabline = 2
-"let g:badwolf_html_link_underline = 0
-"colorscheme badwolf
-
-"" Reload the colorscheme whenever we write the file.
-"augroup color_badwolf_dev
-    "au!
-    "au BufWritePost badwolf.vim color badwolf
-"augroup END
-
-"" Highlight VCS conflict markers
-"match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'
-
-" }}}
-" neocomplete{{{
-let g:neocomplete#enable_at_startup = 1
-" }}}
+ let g:UltiSnipsEditSplit="vertical"
 
 " }}}
 " Functions {{{
@@ -104,16 +90,24 @@ augroup END
 " Options {{{
 set encoding=utf-8
 
-" gruvbox -dark
-colorscheme argonaut
+set colorcolumn=80
 
-set background=dark
+" gruvbox -dark
+let base16colorspace=256  " Access colors present in 256 colorspace"
+colorscheme base16-codeschool
+let g:gruvbox_italic=0
+"set background=dark
 
 " Tabs
 set tabstop=4
 set shiftwidth=4
-set expandtab
-set smarttab
+"set expandtab
+"set smarttab
+
+"italics
+set t_ZH=^[[3m]]
+set t_ZR=^[[23m]]
+
 
 set mouse=a
 set nowrap
@@ -146,7 +140,7 @@ set ignorecase
 set smartcase
 
 set autoindent
-set textwidth=83    " Maximum width of text that is being inserted. A longer
+set textwidth=80    " Maximum width of text that is being inserted. A longer
                     " line will be broken after white space to get this width.
 
 set scrolloff=4
@@ -157,12 +151,13 @@ set mouse=a
 nmap <F8> :TagbarToggle<CR>
 
 inoremap <leader><leader>  <Esc>
-inoremap <leader>p <esc>"+gPa
 inoremap <leader>w <esc>:w<cr>a
 inoremap <leader>q <esc>:wq<cr>
-inoremap <Leader>o <CR><Esc>O
 
+" make newline in normal mode
 nnoremap <CR> 0i<CR><Esc>
+"make space in normal mode add space
+nnoremap <Space> i<Space><Esc>l
 
 nnoremap ; :
 nnoremap <space> za
@@ -176,8 +171,15 @@ nnoremap L $
 nnoremap J L
 nnoremap K H
 
+" better scrolling
+ nnoremap <C-j> <C-d>
+ nnoremap <C-k> <C-u>
+
 " Matching the bash terminal behavior
 nnoremap <C-a> 0
+
+" browser like behaviour
+nnoremap <C-t> :tabnew<CR>
 
 " UltiSnip
 let g:UltiSnipsExpandTrigger="<tab>"

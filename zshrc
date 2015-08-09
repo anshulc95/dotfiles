@@ -50,8 +50,8 @@ export KEYTIMEOUT=1
 
 # prompt
 
-PROMPT=' %B%F{red}» %f'
-RPROMPT='%B%F{red}%~ %B%F{white}%#'
+PROMPT=' %B%F{red} %f'
+RPROMPT='%B%F{cyan}%~ %B%F{green}%#'
 
 #precmd() {
   #RPROMPT=""
@@ -84,3 +84,5 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
 export COLORTERM="YES"
+
+#source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 
