@@ -1,4 +1,4 @@
-!#include "/home/anshul/dotfiles/colors/mocha"
+#include "/home/anshul/.base16-xresources/base16-monokai.dark.xresources"
 
 !URxvt*font:                     xft:Hermit:pixelsize=17
 !URxvt*boldFont:                 xft:Hermit:pixelsize=17

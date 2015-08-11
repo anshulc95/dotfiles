@@ -1,5 +1,5 @@
 xset -b &
-(xrdb ~/.Xdefaults) &
+#(xrdb ~/.Xdefaults) &
 nitrogen --restore &
 #(feh --randomize --bg-fill ~/.wallpapers/girls/* )&
 #( urxvt ) &
