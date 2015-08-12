@@ -66,6 +66,7 @@ set laststatus=2
   "let g:airline_symbols.paste = 'Þ'
   "let g:airline_symbols.paste = '∥'
   "let g:airline_symbols.whitespace = 'Ξ'
+
   " powerline symbols
   let g:airline_left_sep = ''
   let g:airline_left_alt_sep = ''
@@ -153,7 +154,7 @@ set textwidth=80    " Maximum width of text that is being inserted. A longer
 
 set scrolloff=4
 set mouse=a
-" }}}
+ " }}}
 " Mappings {{{
 
 nmap <F8> :TagbarToggle<CR>
@@ -208,12 +209,7 @@ nnoremap <leader>ez :vsplit ~/.zshrc<cr>4j
 if has("gui_running")
 	set guifont=Courier\ 11
     "set guifont=FantasqueSansMono\ 11
-	colorscheme base16-monokai
-	"set background=light
+	set background=dark
 	let g:airline_theme = 'sol'
-	if !exists('g:airline_symbols')
-	  let g:airline_symbols = {}
-	endif
-	let g:airline_symbols.space = "\ua0"
 endif
 " }}}
