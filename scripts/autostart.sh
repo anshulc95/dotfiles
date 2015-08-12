@@ -1,9 +1,11 @@
 xset -b &
 (xrdb ~/.Xdefaults) &
-#nitrogen --restore &
-(feh --randomize --bg-fill ~/.wallpapers/girls/* )&
+
+nitrogen --restore &
+#(feh --randomize --bg-fill ~/.wallpapers/girls/* )&
+
 #( urxvt ) &
-(xcompmgr) &
+#(xcompmgr) &
 (sleep 3s && nm-applet) &
 (pamac-tray)&
 #(blueman-applet)&
