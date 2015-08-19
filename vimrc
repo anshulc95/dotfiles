@@ -14,6 +14,7 @@ Plugin 'gmarik/Vundle.vim'
 
 " Plugins {{{
 Plugin 'Raimondi/delimitMate'
+Plugin 'majutsushi/tagbar'
 Plugin 'tpope/vim-surround'
 Plugin 'morhetz/gruvbox'
 Plugin 'PotatoesMaster/i3-vim-syntax'
@@ -103,9 +104,9 @@ set colorcolumn=80
 
 " gruvbox -dark
 let base16colorspace=256  " Access colors present in 256 colorspace"
-colorscheme base16-monokai
+colorscheme base16-solarized
 let g:gruvbox_italic=0
-"set background=dark
+set background=light
 
 " Tabs
 set tabstop=4
@@ -149,7 +150,7 @@ set ignorecase
 set smartcase
 
 set autoindent
-set textwidth=80    " Maximum width of text that is being inserted. A longer
+"set textwidth=80    " Maximum width of text that is being inserted. A longer
                     " line will be broken after white space to get this width.
 
 set scrolloff=4
@@ -207,6 +208,7 @@ nnoremap <leader>ez :vsplit ~/.zshrc<cr>4j
 " }}}
 " GUI {{{
 if has("gui_running")
+	colorscheme base16-monokai
 	set guifont=Courier\ 11
     "set guifont=FantasqueSansMono\ 11
 	set background=dark

@@ -153,6 +153,7 @@ bindsym $mod+b workspace back_and_forth
 bindsym $mod+c exec firefox
 bindsym $mod+g exec gvim
 bindsym $mod+n exec pcmanfm
+bindsym $mod+Shift+n exec nautilus
 bindsym Control+$alt+t exec gnome-terminal 
 
 # Always floating
