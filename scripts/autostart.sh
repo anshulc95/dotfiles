@@ -5,6 +5,7 @@ nitrogen --restore &
 #(feh --randomize --bg-fill ~/.wallpapers/girls/* )&
 
 (xcompmgr -a -c -f -F) &
+(compton)&
 (sleep 3s && nm-applet) &
 #(blueman-applet)&
 (xfce4-power-manager)&
