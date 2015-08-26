@@ -102,7 +102,7 @@ set encoding=utf-8
 set colorcolumn=80
 
 " Access colors present in 256 colorspace"
-let base16colorspace=256  
+let base16colorspace=256
 set t_Co=256
 " gruvbox  {{{
 let g:gruvbox_bold=1
@@ -111,7 +111,7 @@ let g:gruvbox_italicize_comments=1
 let g:gruvbox_italicize_strings=1
 "}}}
 
-colorscheme badwolf
+colorscheme gruvbox
 "set background=dark
 
 " Tabs
@@ -124,6 +124,9 @@ set mouse=a
 set nowrap
 
 set backspace=indent,eol,start
+
+set list
+set listchars=tab:▸\ ,eol:¬,trail:■,extends:»,precedes:«
 
 set noswapfile
 set nobackup
@@ -211,8 +214,9 @@ nnoremap <leader>ez :vsplit ~/.zshrc<cr>4j
 " }}}
 " GUI {{{
 if has("gui_running")
+	set guioptions=
 	colorscheme badwolf
-	set guifont=FantasqueSansMono\ 11
+	set guifont=FantasqueSansMono\ 12
     "set guifont=FantasqueSansMono\ 11
 	set background=dark
 	let g:airline_theme = 'sol'
