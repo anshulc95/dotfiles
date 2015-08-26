@@ -29,20 +29,17 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-fugitive'
 
 Plugin 'jelera/vim-javascript-syntax'
+Plugin 'sjl/badwolf'
 "}}}
  
 call vundle#end()
 filetype plugin indent on
 syntax on
 
-"let g:gruvbox_termcolors=16 " to achieve better colors, especially red, might
-							" produce strange colors in terminals other than
-							" rxvt
 set t_Co=256
 
 " }}}
 " Plugin settings {{{
-
 " NERDTree{{{
 noremap  <F2> :NERDTreeToggle<cr>
 inoremap <F2> <esc>:NERDTreeToggle<cr>
@@ -51,7 +48,7 @@ inoremap <F2> <esc>:NERDTreeToggle<cr>
 " Airline {{{
 set noshowmode
 set laststatus=2
-"let g:airline_theme = 'powerlineish'
+"let g:airline_theme = 'badwolf'
   if !exists('g:airline_symbols')
 	let g:airline_symbols = {}
   endif
@@ -106,7 +103,15 @@ set colorcolumn=80
 
 " Access colors present in 256 colorspace"
 let base16colorspace=256  
-colorscheme base16-atelierdune
+set t_Co=256
+" gruvbox  {{{
+let g:gruvbox_bold=1
+let g:gruvbox_italic=1
+let g:gruvbox_italicize_comments=1
+let g:gruvbox_italicize_strings=1
+"}}}
+
+colorscheme badwolf
 "set background=dark
 
 " Tabs
@@ -114,11 +119,6 @@ set tabstop=4
 set shiftwidth=4
 "set expandtab
 "set smarttab
-
-"italics
-set t_ZH=^[[3m]]
-set t_ZR=^[[23m]]
-
 
 set mouse=a
 set nowrap
@@ -133,13 +133,13 @@ set encoding=utf-8
 set showcmd
 set showmatch
 
-set number
+"set number
+set rnu
 
 set foldenable
 set foldmethod=marker
 set cursorline
 
-" wild menu
 set wildmenu
 set wildmode=longest:full
 
@@ -211,8 +211,8 @@ nnoremap <leader>ez :vsplit ~/.zshrc<cr>4j
 " }}}
 " GUI {{{
 if has("gui_running")
-	colorscheme gruvbox
-	set guifont=monospace\ 11
+	colorscheme badwolf
+	set guifont=FantasqueSansMono\ 11
     "set guifont=FantasqueSansMono\ 11
 	set background=dark
 	let g:airline_theme = 'sol'
