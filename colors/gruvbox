@@ -11,8 +11,6 @@
 ! soft contrast: *background: #32302f
 *foreground: #ebdbb2
 
-*fadeColor: #ebdbb2
-*fading: 20
 
 ! Black + DarkGrey
 *color0:  #282828
