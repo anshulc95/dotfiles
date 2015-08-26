@@ -27,6 +27,8 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-fugitive'
+
+Plugin 'jelera/vim-javascript-syntax'
 "}}}
  
 call vundle#end()
@@ -102,11 +104,10 @@ set encoding=utf-8
 
 set colorcolumn=80
 
-" gruvbox -dark
-let base16colorspace=256  " Access colors present in 256 colorspace"
-colorscheme base16-solarized
-let g:gruvbox_italic=0
-set background=light
+" Access colors present in 256 colorspace"
+let base16colorspace=256  
+colorscheme base16-atelierdune
+"set background=dark
 
 " Tabs
 set tabstop=4
@@ -131,7 +132,9 @@ set encoding=utf-8
 
 set showcmd
 set showmatch
+
 set number
+
 set foldenable
 set foldmethod=marker
 set cursorline
@@ -160,7 +163,7 @@ set mouse=a
 
 nmap <F8> :TagbarToggle<CR>
 
-inoremap <leader><leader>  <Esc>
+inoremap <leader><leader>  <Esc>l
 inoremap <leader>w <esc>:w<cr>a
 inoremap <leader>q <esc>:wq<cr>
 
@@ -208,8 +211,8 @@ nnoremap <leader>ez :vsplit ~/.zshrc<cr>4j
 " }}}
 " GUI {{{
 if has("gui_running")
-	colorscheme base16-monokai
-	set guifont=Courier\ 11
+	colorscheme gruvbox
+	set guifont=monospace\ 11
     "set guifont=FantasqueSansMono\ 11
 	set background=dark
 	let g:airline_theme = 'sol'

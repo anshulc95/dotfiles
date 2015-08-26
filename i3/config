@@ -14,7 +14,7 @@ bindsym $alt+Return exec i3-sensible-terminal
 # kill focused window
 bindsym $mod+q kill
 
-bindsym $mod+d exec dmenu_run -b -f -i  -fn 'Ohsnap-13:bold' -sf '#282828' -sb '$cyan' -nb '$fg' -nf '$bg'
+bindsym $mod+d exec dmenu_run -b -f -i  -fn 'Ohsnap-13:bold' -sf '#282828' -sb '$cyan' -nb '$bg' -nf '$fg'
 
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
@@ -143,6 +143,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 new_window pixel 3
+bindsym $mod+u border none
 
 # Autostart
 exec --no-startup-id sh ~/.scripts/autostart.sh
@@ -163,25 +164,28 @@ for_window [class="Xfce4-appfinder" instance="xfce4-appfinder"] floating enable
 for_window [class="Orage" instance="orage"] floating enable
 for_window [class="Galculator" instance="galculator"] floating enable
 for_window [class="Xfce4-terminal" instance="xfce4-terminal"] floating enable
+for_window [class="sun-awt-X11-XFramePeer" instance="org-sdg-xdman-gui-XDMMainWindow"] floating enable
 
+
+for_window [class="Firefox"] border none
 
 # Colors
 # bar bg
-set $bg #f8f8f2
+set $bg #2d2d2d
 # focused
-set $fg #272822
+set $fg #d3d0c8
 
-set $red #f92672
-set $blue #a59f85
-set $cyan #a1efe4
-set $grey #a59f85
+set $red #f99157
+set $blue #a09f93
+set $cyan #66cccc
+set $grey #747369
 
 set $orange #fe8019
-set $green #a6e22e
+set $green #99cc99
 set $magenta #ae81ff
 
 # window
-set $wb #282722
+set $wb #d3d0c8
 
 bar {
     strip_workspace_numbers no
@@ -195,7 +199,7 @@ colors {
 	    background $bg
         statusline $wb
 			                #BORDER 	#BACKGROUND #TEXT
-		focused_workspace   $green     	$green      $fg
+		focused_workspace   $green     	$green      $bg
 		inactive_workspace  $bg     	$bg         $fg
 		urgent_workspace    $red 		$red 		$bg
     }
@@ -203,9 +207,9 @@ colors {
 
 
 #class                      border   	bg  		text
-client.focused              $grey     	$grey     	$bg
-client.focused_inactive     $fg 		$fg 		$bg
-client.unfocused            $fg 		$fg  		$bg
+client.focused              $fg     	$fg     	$bg
+client.focused_inactive     $green 		$green 		$bg
+client.unfocused            $grey 		$grey  		$bg
 client.urgent               $bg	 		$bg			$bg
 client.background           #161616
 
@@ -216,8 +220,8 @@ assign [class="Gimp"] $WS10
 assign [class="Clementine"] $WS4
 assign [class="qpdfview"] $WS9
 
-gaps inner 10
-gaps outer 10
+#gaps inner 10
+#gaps outer 10
 
 # change workspace using alt-tab
 # credit goes to: https://www.michael-schaefer.org/en/
@@ -228,4 +232,5 @@ gaps outer 10
 bindsym Mod1+Tab workspace next
 bindsym Mod1+Shift+Tab workspace prev
 bindsym $mod+$alt+l exec sh ~/.scripts/i3BlurLock.sh
+
 #vim:filetype=i3

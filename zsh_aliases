@@ -18,7 +18,7 @@ alias r='ranger'
 
 alias pacin='sudo pacman -S'
 alias pacrem='sudo pacman -Rns'
-alias pacc='sudo pacman -Scc & rm -rf /tmp/yaourt-tmp-anshul/*'		#Clean cache
+alias pacc='sudo pacman -Scc'		#Clean cache
 alias pacupg='sudo pacman -Syu'
 alias pacupgy='sudo pacman -Siyyu'
 alias pacdl='sudo pacman -Sw'
