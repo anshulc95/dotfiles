@@ -4,7 +4,7 @@
 
 ! vim: ft=xdefaults
 *background: #151515
-*foreground: #888888
+*foreground: #E8E8D3
 ! black
 *color0: #1C1C1C
 *color8: #404040

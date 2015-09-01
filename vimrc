@@ -12,26 +12,26 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 
-" Plugins {{{
 Plugin 'Raimondi/delimitMate'
 Plugin 'majutsushi/tagbar'
 Plugin 'tpope/vim-surround'
-Plugin 'morhetz/gruvbox'
 Plugin 'PotatoesMaster/i3-vim-syntax'
 Plugin 'bling/vim-airline'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
-Plugin 'chriskempson/base16-vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-fugitive'
-
 Plugin 'jelera/vim-javascript-syntax'
+
+" colors
 Plugin 'sjl/badwolf'
-"}}}
- 
+Plugin 'tomasr/molokai'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'nanotech/jellybeans.vim'
+
 call vundle#end()
 filetype plugin indent on
 syntax on
@@ -48,7 +48,7 @@ inoremap <F2> <esc>:NERDTreeToggle<cr>
 " Airline {{{
 set noshowmode
 set laststatus=2
-"let g:airline_theme = 'badwolf'
+let g:airline_theme = 'sol'
   if !exists('g:airline_symbols')
 	let g:airline_symbols = {}
   endif
@@ -103,7 +103,9 @@ set colorcolumn=80
 
 " Access colors present in 256 colorspace"
 let base16colorspace=256
-set t_Co=256
+syntax enable
+set background=light
+colorscheme jellybeans
 " gruvbox  {{{
 let g:gruvbox_bold=1
 let g:gruvbox_italic=1
@@ -111,8 +113,6 @@ let g:gruvbox_italicize_comments=1
 let g:gruvbox_italicize_strings=1
 "}}}
 
-colorscheme gruvbox
-"set background=dark
 
 " Tabs
 set tabstop=4
@@ -125,7 +125,6 @@ set nowrap
 
 set backspace=indent,eol,start
 
-set list
 set listchars=tab:▸\ ,eol:¬,trail:■,extends:»,precedes:«
 
 set noswapfile
@@ -170,10 +169,10 @@ inoremap <leader><leader>  <Esc>l
 inoremap <leader>w <esc>:w<cr>a
 inoremap <leader>q <esc>:wq<cr>
 
+inoremap <S-Down> <esc>li<cr><esc>O
+
 " make newline in normal mode
 nnoremap <CR> 0i<CR><Esc>
-"make space in normal mode add space
-nnoremap <Space> i<Space><Esc>l
 
 nnoremap ; :
 nnoremap <space> za
@@ -214,11 +213,12 @@ nnoremap <leader>ez :vsplit ~/.zshrc<cr>4j
 " }}}
 " GUI {{{
 if has("gui_running")
-	set guioptions=
-	colorscheme badwolf
-	set guifont=FantasqueSansMono\ 12
+	"set guioptions=
+	colorscheme molokai
+	set guifont=SourceCodeProMedium\ 12
     "set guifont=FantasqueSansMono\ 11
 	set background=dark
-	let g:airline_theme = 'sol'
+	let g:airline_theme = 'badwolf'
+	set lines=24 columns=80
 endif
 " }}}

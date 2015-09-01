@@ -1,5 +1,5 @@
 !#include "/home/anshul/.base16-xresources/base16-atelierdune.dark.xresources"
-#include "/home/anshul/dotfiles/colors/gruvbox"
+#include "/home/anshul/dotfiles/colors/jellybean"
 
 URxvt*font:                     xft:FantasqueSansMono:pixelsize=17
 URxvt*boldFont:                 xft:FantasqueSansMono:bold:pixelsize=17
