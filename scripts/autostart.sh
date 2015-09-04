@@ -6,7 +6,7 @@ nitrogen --restore &
 
 (xcompmgr -a -c -f -F) &
 (compton)&
-(sleep 3s && nm-applet) &
+#(sleep 3s && nm-applet) &
 #(blueman-applet)&
 (xfce4-power-manager)&
 (pa-applet)&

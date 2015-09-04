@@ -15,14 +15,13 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'Raimondi/delimitMate'
 Plugin 'majutsushi/tagbar'
 Plugin 'tpope/vim-surround'
-Plugin 'PotatoesMaster/i3-vim-syntax'
-Plugin 'bling/vim-airline'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
+Plugin 'PotatoesMaster/i3-vim-syntax'
+Plugin 'bling/vim-airline'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'easymotion/vim-easymotion'
-Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'jelera/vim-javascript-syntax'
 
@@ -31,6 +30,8 @@ Plugin 'sjl/badwolf'
 Plugin 'tomasr/molokai'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'nanotech/jellybeans.vim'
+Plugin 'ajh17/Spacegray.vim'
+Plugin 'whatyouhide/vim-gotham'
 
 call vundle#end()
 filetype plugin indent on
@@ -48,7 +49,7 @@ inoremap <F2> <esc>:NERDTreeToggle<cr>
 " Airline {{{
 set noshowmode
 set laststatus=2
-let g:airline_theme = 'sol'
+"let g:airline_theme = 'sol'
   if !exists('g:airline_symbols')
 	let g:airline_symbols = {}
   endif
@@ -76,7 +77,6 @@ let g:airline_theme = 'sol'
   let g:airline_symbols.readonly = ''
   let g:airline_symbols.linenr = ''
 " }}}
- let g:UltiSnipsEditSplit="vertical"
 
 " }}}
 " Functions {{{
@@ -105,7 +105,7 @@ set colorcolumn=80
 let base16colorspace=256
 syntax enable
 set background=light
-colorscheme jellybeans
+colorscheme solarized
 " gruvbox  {{{
 let g:gruvbox_bold=1
 let g:gruvbox_italic=1
@@ -196,10 +196,6 @@ nnoremap <C-a> 0
 " browser like behaviour
 nnoremap <C-t> :tabnew<CR>
 
-" UltiSnip
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 " move vertically by visual line
 nnoremap j gj
@@ -214,11 +210,11 @@ nnoremap <leader>ez :vsplit ~/.zshrc<cr>4j
 " GUI {{{
 if has("gui_running")
 	"set guioptions=
-	colorscheme molokai
-	set guifont=SourceCodeProMedium\ 12
+	set guifont=FantasqueSansMono\ 13
     "set guifont=FantasqueSansMono\ 11
-	set background=dark
-	let g:airline_theme = 'badwolf'
-	set lines=24 columns=80
+	set background=light
+	colorscheme solarized
+	"let g:airline_theme = 'behelit'
+	set lines=31 columns=81
 endif
 " }}}
