@@ -1,5 +1,5 @@
 #!/bin/bash
 
-font="EnvyCodeR-11"
+font="SourceCodeProMedium-11"
 
 dmenu_run -i -h 768 -w 1366 -q -l 1 -o .9 -p "                                                  execute" -fn "$font" -nb "#000000" -nf "#bbbbbb" -sb "#000000" -sf "#fabd2f"

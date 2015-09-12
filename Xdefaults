@@ -1,8 +1,8 @@
-!#include "/home/anshul/.base16-xresources/base16-atelierdune.dark.xresources"
-#include "/home/anshul/dotfiles/colors/solarized_light"
+!#include "/home/anshul/dotfiles/colors/solarized_light"
+#include "/home/anshul/dotfiles/colors/tomorrow"
 
-URxvt*font:                     xft:FantasqueSansMono:pixelsize=17
-URxvt*boldFont:                 xft:FantasqueSansMono:bold:pixelsize=17
+URxvt*font:                     xft:SourceCodePro:pixelsize=15
+URxvt*boldFont:                 xft:SourceCodePro:semibold:bold:pixelsize=15
 !URxvt*italicFont::              xft:FantasqueSansMono:italic:pixelsize=16:antialias=true:italic:autohint=true:hinting=true
 !URxvt*bolditalicFont::          xft:FantasqueSansMono:bold:italic:pixelsize=16:antialias=true:bold:italic:autohint=true:hinting=true
 
@@ -15,8 +15,3 @@ URxvt*cursorBlink:              true
 urxvt*borderLess:               false
 urxvt*internalBorder:           0
 urxvt*externalBorder:           0
-
-!URxvt.transparent:true
-!URxvt.shading:shading:100
-!URxvt.depth: 32
-!URxvt.background: rgba:1111/1111/1111/dddd

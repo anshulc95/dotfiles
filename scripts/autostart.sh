@@ -9,4 +9,4 @@ nitrogen --restore &
 #(sleep 3s && nm-applet) &
 #(blueman-applet)&
 (xfce4-power-manager)&
-(pa-applet)&
+#(pa-applet)&

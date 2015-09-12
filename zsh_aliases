@@ -30,4 +30,5 @@ alias ycc='rm -rf /tmp/yaourt-tmp-anshul/*'
 alias gs='cd ~/dotfiles/ && git status'
 
 alias lock='sh ~/.scripts/i3BlurLock.sh'
-alias scrot='sh ~/.scripts/scrot.sh'
+
+alias studio="~/./Documents/android-studio/bin/studio.sh"

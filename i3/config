@@ -14,6 +14,7 @@ bindsym $alt+Return exec i3-sensible-terminal
 # kill focused window
 bindsym $mod+q kill
 
+#bindsym $mod+d exec sh ~/.scripts/dmenu_launcher
 bindsym $mod+d exec dmenu_run -b -f -i  -fn 'Ohsnap-13:bold' -sf '$fg' -sb '$red' -nb '$bg' -nf '$fg'
 
 # There also is the (new) i3-dmenu-desktop which only displays applications
@@ -156,6 +157,7 @@ bindsym $mod+g exec gvim
 bindsym $mod+n exec pcmanfm
 bindsym $mod+Shift+n exec nautilus
 bindsym Control+$alt+t exec gnome-terminal 
+bindsym Control+$alt+x exec xfce4-terminal --fullscreen
 
 # Always floating
 for_window [class="Nitrogen" instance="nitrogen"] floating enable
@@ -171,18 +173,18 @@ for_window [class="Firefox"] border none
 
 # Colors
 # bar bg
-set $bg #002b36
+set $bg #2d2d2d
 # focused
-set $fg #fdf6e3
+set $fg #cccccc
 
 set $red #dc322f
-set $blue #268bd2
-set $cyan #2aa198
-set $grey #002b36
+set $blue #6699cc
+set $cyan #66cccc
+set $grey #666666
 
-set $orange #cb4b16
-set $green #859900
-set $magenta #d33682
+set $orange #f99157
+set $green #99cc99
+set $magenta #cc99cc
 
 # window
 set $wb #fdf6e3
@@ -193,23 +195,23 @@ bar {
 	position bottom
 	#font -misc-tamsyn.icons-medium-*-normal-*-14-*-*-*-*-*-iso8859-*
 	font xft: Ohsnap 10
-	mode hide
+	#mode hide
     
 colors {
 	    background $bg
         statusline $wb
 			                #BORDER 	#BACKGROUND #TEXT
-		focused_workspace   $fg     	$bg      $fg
-		inactive_workspace  $bg     	$bg         $cyan
-		urgent_workspace    $red 		$red 		$bg
+		focused_workspace   $fg     	$fg      	$bg
+		inactive_workspace  $bg     	$bg         $fg
+		urgent_workspace    $red 		$red 		$fg
     }
 }
 
 
 #class                      border   	bg  		text
-client.focused              $cyan     	$cyan     	$fg
-client.focused_inactive     $green 		$green 		$bg
-client.unfocused            $fg 		$fg  		$bg
+client.focused              $cyan     	$cyan     	$bg
+client.focused_inactive     $bg 		$bg 		$fg
+client.unfocused            $bg 		$bg  		$fg
 client.urgent               $red	 	$red		$bg
 client.background           #161616
 
