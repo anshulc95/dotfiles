@@ -23,21 +23,21 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'tpope/vim-fugitive'
-Plugin 'jelera/vim-javascript-syntax'
 
 " colors
 Plugin 'sjl/badwolf'
 Plugin 'tomasr/molokai'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'nanotech/jellybeans.vim'
-Plugin 'ajh17/Spacegray.vim'
-Plugin 'whatyouhide/vim-gotham'
+
+Plugin 'myusuf3/numbers.vim'
 
 call vundle#end()
 filetype plugin indent on
 syntax on
 
 set t_Co=256
+
 
 " }}}
 " Plugin settings {{{
@@ -77,7 +77,12 @@ set laststatus=2
   let g:airline_symbols.readonly = ''
   let g:airline_symbols.linenr = ''
 " }}}
+" Numbers by myusuf {{{
+let g:enable_numbers = 0
+nnoremap <F3> :NumbersToggle<CR>
+nnoremap <F4> :NumbersOnOff<CR>
 
+"}}}
 " }}}
 " Functions {{{
 
@@ -104,8 +109,8 @@ set colorcolumn=80
 " Access colors present in 256 colorspace"
 let base16colorspace=256
 syntax enable
-set background=light
-colorscheme solarized
+"set background=light
+colorscheme wombat256
 " gruvbox  {{{
 let g:gruvbox_bold=1
 let g:gruvbox_italic=1
@@ -210,10 +215,9 @@ nnoremap <leader>ez :vsplit ~/.zshrc<cr>4j
 " GUI {{{
 if has("gui_running")
 	"set guioptions=
-	set guifont=FantasqueSansMono\ 13
-    "set guifont=FantasqueSansMono\ 11
-	set background=light
-	colorscheme solarized
+	set guifont=SourceCodeProMedium\ 12
+	"set background=light
+	colorscheme wombat256
 	"let g:airline_theme = 'behelit'
 	set lines=31 columns=81
 endif

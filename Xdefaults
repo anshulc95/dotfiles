@@ -1,15 +1,18 @@
 !#include "/home/anshul/dotfiles/colors/solarized_light"
-#include "/home/anshul/dotfiles/colors/tomorrow"
+#include "/home/anshul/dotfiles/colors/wombat"
 
-URxvt*font:                     xft:SourceCodePro:pixelsize=15
-URxvt*boldFont:                 xft:SourceCodePro:semibold:bold:pixelsize=15
+URxvt*font:                     xft:SourceCodePro:medium:pixelsize=15
+URxvt*boldFont:                 xft:SourceCodePro:bold:pixelsize=15
 !URxvt*italicFont::              xft:FantasqueSansMono:italic:pixelsize=16:antialias=true:italic:autohint=true:hinting=true
 !URxvt*bolditalicFont::          xft:FantasqueSansMono:bold:italic:pixelsize=16:antialias=true:bold:italic:autohint=true:hinting=true
 
 URxvt*scrollBar:                false
 URxvt*scrollBar_right:          true
-urxvt*transparent:              false
-urxvt*shading:                  5
+
+!urxvt*transparent:              true
+!urxvt*shading:                  180
+!urxvt*tintColor:				#eeeeee
+
 URxvt*cursorUnderline:          false
 URxvt*cursorBlink:              true
 urxvt*borderLess:               false

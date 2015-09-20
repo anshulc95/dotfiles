@@ -1,12 +1,12 @@
 xset -b &
 (xrdb ~/.Xdefaults) &
 
-nitrogen --restore &
-#(feh --randomize --bg-fill ~/.wallpapers/girls/* )&
+#nitrogen --restore &
+(feh --randomize --bg-fill ~/.wallpapers/girls/* )&
 
-(xcompmgr -a -c -f -F) &
-(compton)&
-#(sleep 3s && nm-applet) &
+#(xcompmgr -c -n) &
+(compton -b)&
+(sleep 3s && nm-applet) &
 #(blueman-applet)&
 (xfce4-power-manager)&
-#(pa-applet)&
+(pa-applet)&
