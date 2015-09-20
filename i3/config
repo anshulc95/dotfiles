@@ -76,27 +76,27 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
-set $WS1 1:HOME
-set $WS2 2:TERM
-set $WS3 3:WEB
-set $WS4 4:MEDIA
-set $WS5 5
-set $WS6 6
-set $WS7 7
-set $WS8 8
-set $WS9 9:PDF
-set $WS10 10:GIMP
-
-#set $WS1 1:
-#set $WS2 2:
-#set $WS3 3:
-#set $WS4 4:
-#set $WS5 5:
-#set $WS6 6:6
-#set $WS7 7:7
-#set $WS8 8:8
-#set $WS9 9:
+#set $WS1 1:HOME
+#set $WS2 2:TERM
+#set $WS3 3:WEB
+#set $WS4 4:MEDIA
+#set $WS5 5
+#set $WS6 6
+#set $WS7 7
+#set $WS8 8
+#set $WS9 9:PDF
 #set $WS10 10:GIMP
+
+set $WS1 1:
+set $WS2 2:
+set $WS3 3:
+set $WS4 4:
+set $WS5 5:5
+set $WS6 6:6
+set $WS7 7:
+set $WS8 8:8
+set $WS9 9:
+set $WS10 10:
 
 # switch to workspace
 bindsym Mod4+1 workspace $WS1
@@ -143,7 +143,8 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-new_window pixel 3
+#new_window pixel 3
+new_window none
 bindsym $mod+u border none
 
 # Autostart
@@ -166,10 +167,9 @@ for_window [class="Xfce4-appfinder" instance="xfce4-appfinder"] floating enable
 for_window [class="Orage" instance="orage"] floating enable
 for_window [class="Galculator" instance="galculator"] floating enable
 for_window [class="Xfce4-terminal" instance="xfce4-terminal"] floating enable
-for_window [class="sun-awt-X11-XFramePeer" instance="org-sdg-xdman-gui-XDMMainWindow"] floating enable
-
 
 for_window [class="Firefox"] border none
+#for_window [class="URxvt"] border none
 
 # Colors
 # bar bg
@@ -190,7 +190,7 @@ set $magenta #cc99cc
 set $wb #fdf6e3
 
 bar {
-    strip_workspace_numbers no
+    strip_workspace_numbers yes
         status_command i3status
 	position bottom
 	#font -misc-tamsyn.icons-medium-*-normal-*-14-*-*-*-*-*-iso8859-*
@@ -209,9 +209,9 @@ colors {
 
 
 #class                      border   	bg  		text
-client.focused              $cyan     	$cyan     	$bg
+client.focused              $red     	$red     	$bg
 client.focused_inactive     $bg 		$bg 		$fg
-client.unfocused            $bg 		$bg  		$fg
+client.unfocused            $fg 		$fg  		$bg
 client.urgent               $red	 	$red		$bg
 client.background           #161616
 
@@ -221,9 +221,10 @@ assign [class="Vlc"] $WS4
 assign [class="Gimp"] $WS10
 assign [class="Clementine"] $WS4
 assign [class="qpdfview"] $WS9
+assign [class="Pcmanfm"] $WS2
 
-#gaps inner 10
-#gaps outer 10
+gaps inner 10
+gaps outer 10
 
 # change workspace using alt-tab
 # credit goes to: https://www.michael-schaefer.org/en/
