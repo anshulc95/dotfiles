@@ -8,14 +8,14 @@ set $alt Mod1
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
-bindsym $alt+Return exec i3-sensible-terminal
+bindsym $mod+Return exec urxvtc
+bindsym $alt+Return exec urxvtc
 
 # kill focused window
 bindsym $mod+q kill
 
 #bindsym $mod+d exec sh ~/.scripts/dmenu_launcher
-bindsym $mod+d exec dmenu_run -b -f -i  -fn 'Ohsnap-13:bold' -sf '$fg' -sb '$red' -nb '$bg' -nf '$fg'
+bindsym $mod+d exec dmenu_run -b -f -i  -fn 'Ohsnap-13:bold' -sf '$bg' -sb '$fg' -nb '$bg' -nf '$fg'
 
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
@@ -143,8 +143,8 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-#new_window pixel 3
-new_window none
+new_window pixel 3
+#new_window none
 bindsym $mod+u border none
 
 # Autostart
@@ -167,31 +167,33 @@ for_window [class="Xfce4-appfinder" instance="xfce4-appfinder"] floating enable
 for_window [class="Orage" instance="orage"] floating enable
 for_window [class="Galculator" instance="galculator"] floating enable
 for_window [class="Xfce4-terminal" instance="xfce4-terminal"] floating enable
+for_window [class="SFML" instance="main"] floating enable
+for_window [class="Gnome-terminal" instance="gnome-terminal-server"] floating enable
 
 for_window [class="Firefox"] border none
 #for_window [class="URxvt"] border none
 
-# Colors
+# Colours
 # bar bg
-set $bg #2d2d2d
+set $bg #1d1f21
 # focused
-set $fg #cccccc
+set $fg #c5c8c5
 
-set $red #dc322f
-set $blue #6699cc
-set $cyan #66cccc
-set $grey #666666
-
+set $red #cc6666
+set $blue #81a2be
+set $cyan #689d6a
+set $grey #282a2e
+set $yellow #b57614
 set $orange #f99157
-set $green #99cc99
-set $magenta #cc99cc
+set $green #98971a
+set $magenta #8f3f71
 
 # window
 set $wb #fdf6e3
 
 bar {
     strip_workspace_numbers yes
-        status_command i3status
+	status_command i3status
 	position bottom
 	#font -misc-tamsyn.icons-medium-*-normal-*-14-*-*-*-*-*-iso8859-*
 	font xft: Ohsnap 10
@@ -203,15 +205,15 @@ colors {
 			                #BORDER 	#BACKGROUND #TEXT
 		focused_workspace   $fg     	$fg      	$bg
 		inactive_workspace  $bg     	$bg         $fg
-		urgent_workspace    $red 		$red 		$fg
+		urgent_workspace    $blue 		$blue 		$bg
     }
 }
 
 
 #class                      border   	bg  		text
 client.focused              $red     	$red     	$bg
-client.focused_inactive     $bg 		$bg 		$fg
-client.unfocused            $fg 		$fg  		$bg
+client.focused_inactive     $grey 		$grey 		$fg
+client.unfocused            $grey 		$grey  		$fg
 client.urgent               $red	 	$red		$bg
 client.background           #161616
 
@@ -224,7 +226,7 @@ assign [class="qpdfview"] $WS9
 assign [class="Pcmanfm"] $WS2
 
 gaps inner 10
-gaps outer 10
+gaps outer 5
 
 # change workspace using alt-tab
 # credit goes to: https://www.michael-schaefer.org/en/

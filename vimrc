@@ -1,5 +1,5 @@
 " .vimrc
-" Author: Anshul Chauhan <anshulchauhan@outlook.com>
+" Author: Anshul Chauhan <anshulchauhan@outlook.com
 " Source: http://github.com/anshulc95/dotfiles/
 
 " Vundle & Startups {{{
@@ -29,6 +29,7 @@ Plugin 'sjl/badwolf'
 Plugin 'tomasr/molokai'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'nanotech/jellybeans.vim'
+Plugin 'morhetz/gruvbox'
 
 Plugin 'myusuf3/numbers.vim'
 
@@ -49,7 +50,7 @@ inoremap <F2> <esc>:NERDTreeToggle<cr>
 " Airline {{{
 set noshowmode
 set laststatus=2
-"let g:airline_theme = 'sol'
+let g:airline_theme = 'powerlineish'
   if !exists('g:airline_symbols')
 	let g:airline_symbols = {}
   endif
@@ -106,18 +107,16 @@ set encoding=utf-8
 
 set colorcolumn=80
 
-" Access colors present in 256 colorspace"
-let base16colorspace=256
-syntax enable
-"set background=light
-colorscheme wombat256
 " gruvbox  {{{
 let g:gruvbox_bold=1
 let g:gruvbox_italic=1
 let g:gruvbox_italicize_comments=1
 let g:gruvbox_italicize_strings=1
-"}}}
+let g:gruvbox_bold_strings=1
 
+set background=dark
+colorscheme hybrid
+"}}}
 
 " Tabs
 set tabstop=4
@@ -186,7 +185,7 @@ nnoremap q :wq!<cr>
 
 " Easy movements
 " By the way its much more easier to remember this way
-nnoremap H 0
+nnoremap H ^
 nnoremap L $
 nnoremap J L
 nnoremap K H
@@ -214,10 +213,11 @@ nnoremap <leader>ez :vsplit ~/.zshrc<cr>4j
 " }}}
 " GUI {{{
 if has("gui_running")
-	"set guioptions=
-	set guifont=SourceCodeProMedium\ 12
-	"set background=light
-	colorscheme wombat256
+	set guioptions=
+	let g:airline_theme = 'powerlineish'
+	set guifont=MesloLGL\ 10
+	set background=dark
+	colorscheme hybrid
 	"let g:airline_theme = 'behelit'
 	set lines=31 columns=81
 endif
