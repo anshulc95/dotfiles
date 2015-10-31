@@ -1,7 +1,8 @@
-#include "/home/anshul/dotfiles/colors/hybrid"
+#include "/home/anshul/dotfiles/colors/cold-bruise"
 
 URxvt*font:                     xft:SourceCodePro:medium:pixelsize=14
-URxvt*boldFont:                 xft:SourceCodePro:bold:pixelsize=14
+URxvt*boldFont:                 xft:SourceCodePro:medium:pixelsize=14
+
 !URxvt*italicFont::              xft:FantasqueSansMono:italic:pixelsize=16:antialias=true:italic:autohint=true:hinting=true
 !URxvt*bolditalicFont::          xft:FantasqueSansMono:bold:italic:pixelsize=16:antialias=true:bold:italic:autohint=true:hinting=true
 
@@ -9,8 +10,8 @@ URxvt*scrollBar:                false
 URxvt*scrollBar_right:          true
 
 !urxvt*transparent:              true
-!urxvt*shading:                  180
-!urxvt*tintColor:				#eeeeee
+!urxvt*shading:                  80
+!urxvt*tintColor:				#fbfbfb
 
 URxvt*cursorUnderline:          false
 URxvt*cursorBlink:              true

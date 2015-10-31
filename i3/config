@@ -165,34 +165,36 @@ for_window [class="Nitrogen" instance="nitrogen"] floating enable
 for_window [class="Xfce4-mixer" instance="xfce4-mixer"] floating enable
 for_window [class="Xfce4-appfinder" instance="xfce4-appfinder"] floating enable
 for_window [class="Orage" instance="orage"] floating enable
+for_window [class="Gvim" instance="gvim"] floating enable
 for_window [class="Galculator" instance="galculator"] floating enable
 for_window [class="Xfce4-terminal" instance="xfce4-terminal"] floating enable
 for_window [class="SFML" instance="main"] floating enable
 for_window [class="Gnome-terminal" instance="gnome-terminal-server"] floating enable
 
 for_window [class="Firefox"] border none
-#for_window [class="URxvt"] border none
+for_window [class="Vlc"] border none
 
 # Colours
 # bar bg
-set $bg #1d1f21
+set $bg #f0f4f5
 # focused
-set $fg #c5c8c5
+set $fg #545855
 
-set $red #cc6666
-set $blue #81a2be
-set $cyan #689d6a
+set $red #ac4c64
+set $blue #4c64ac
+set $cyan #4b96ab
 set $grey #282a2e
-set $yellow #b57614
+set $lightgrey #707880
+set $yellow #ac8b4c
 set $orange #f99157
-set $green #98971a
-set $magenta #8f3f71
+set $green #4cac64
+set $magenta #a04bab
 
 # window
 set $wb #fdf6e3
 
 bar {
-    strip_workspace_numbers yes
+	strip_workspace_numbers yes
 	status_command i3status
 	position bottom
 	#font -misc-tamsyn.icons-medium-*-normal-*-14-*-*-*-*-*-iso8859-*
@@ -201,19 +203,19 @@ bar {
     
 colors {
 	    background $bg
-        statusline $wb
+        statusline $fg
 			                #BORDER 	#BACKGROUND #TEXT
 		focused_workspace   $fg     	$fg      	$bg
 		inactive_workspace  $bg     	$bg         $fg
-		urgent_workspace    $blue 		$blue 		$bg
+		urgent_workspace    $red 		$red 		$bg
     }
 }
 
 
 #class                      border   	bg  		text
-client.focused              $red     	$red     	$bg
-client.focused_inactive     $grey 		$grey 		$fg
-client.unfocused            $grey 		$grey  		$fg
+client.focused              $grey    $grey    $bg
+client.focused_inactive     $green 		$green 		$fg
+client.unfocused            $bg $bg  $fg
 client.urgent               $red	 	$red		$bg
 client.background           #161616
 
@@ -225,8 +227,8 @@ assign [class="Clementine"] $WS4
 assign [class="qpdfview"] $WS9
 assign [class="Pcmanfm"] $WS2
 
-gaps inner 10
-gaps outer 5
+gaps inner 12
+gaps outer 6
 
 # change workspace using alt-tab
 # credit goes to: https://www.michael-schaefer.org/en/

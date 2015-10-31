@@ -1,7 +1,7 @@
 xset -b &
 (xrdb ~/.Xdefaults) &
 #(feh --bg-fill ~/.wallpapers/quotes/22.jpg)&
-(variety) &
+#(variety) &
 (urxvtd -q -o -f)&
 (compton -b)&
 (sleep 5s && nm-applet) &

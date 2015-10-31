@@ -1,6 +1,6 @@
 alias ls='ls --color=auto --sort=extension'
 alias l='ls --color=auto'
-alias ll='ls --color=auto -l -a'
+alias ll='ls --color=auto -l -a -X'
 
 alias vv='vim ~/.vimrc'
 alias vi3='vim ~/.i3/config'
