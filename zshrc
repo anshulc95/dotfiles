@@ -14,7 +14,6 @@ zstyle :compinstall filename '/home/anshul/.zshrc'
 #export PATH="/home/ans/.gem/ruby/2.2.0/bin:$PATH"
 PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 
-
 autoload -U compinit promptinit
 compinit
 promptinit
@@ -46,9 +45,34 @@ bindkey -M vicmd 'u' undo
 export KEYTIMEOUT=1
 
 
+
+_git_repo_name() {
+    gittopdir=$(git rev-parse --git-dir 2> /dev/null)
+    if [[ "foo$gittopdir" == "foo.git" ]]; then
+        echo `basename $(pwd)`
+    elif [[ "foo$gittopdir" != "foo" ]]; then
+        echo `dirname $gittopdir | xargs basename`
+    fi
+}
+_git_branch_name() {
+    git branch 2>/dev/null | awk '/^\*/ { print $2 }'
+}
+ _git_is_dirty() {
+   git diff --quiet 2> /dev/null || echo '*'
+ }
+
+autoload -U colors
+colors
+
+setopt prompt_subst
+
 # prompt
-PROMPT=' %B%F{red} %f'
-RPROMPT='%B%F{cyan}%~ %B%F{green}%#'
+PROMPT='%B%F{magenta}→%b %f'
+RPROMPT='%B%1~%b %F{magenta}$(_git_branch_name)%f'
+
+#PROMPT='$reset_color→ '
+#RPROMPT='%B%F{cyan} %~'
+
 
 #Make sure to use UTF-8
 export LC_ALL=en_US.UTF-8

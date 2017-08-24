@@ -2,6 +2,9 @@ alias ls='ls --color=auto --sort=extension'
 alias l='ls --color=auto'
 alias ll='ls --color=auto -l -a -X'
 
+alias ..='cd ..'
+alias ....='cd ../..'
+
 alias vv='vim ~/.vimrc'
 alias vi3='vim ~/.i3/config'
 alias vz='vim ~/.zshrc'
@@ -17,6 +20,8 @@ alias e='exit'
 alias c='clear'
 alias r='ranger'
 
+alias debi='sudo dpkg -i'
+
 alias pacin='sudo pacman -S'
 alias pacrem='sudo pacman -Rns'
 alias pacc='sudo pacman -Scc'		#Clean cache
@@ -28,4 +33,4 @@ alias pacser='sudo pacman -Ss'
 
 alias ycc='rm -rf /tmp/yaourt-tmp-anshul/*'
 
-alias gs='cd ~/dotfiles/ && git status'
+alias gs='git status'
