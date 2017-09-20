@@ -1,7 +1,7 @@
 #include "/home/anshul/dotfiles/colors/cold-bruise"
 
-URxvt*font:                     xft:SourceCodePro:medium:pixelsize=14
-URxvt*boldFont:                 xft:SourceCodePro:medium:pixelsize=14
+URxvt*font:                     xft:Ubuntu Mono:medium:pixelsize=14
+URxvt*boldFont:                 xft:Ubuntu Mono:medium:pixelsize=14
 
 !URxvt*italicFont::              xft:FantasqueSansMono:italic:pixelsize=16:antialias=true:italic:autohint=true:hinting=true
 !URxvt*bolditalicFont::          xft:FantasqueSansMono:bold:italic:pixelsize=16:antialias=true:bold:italic:autohint=true:hinting=true

@@ -17,24 +17,23 @@ Plugin 'majutsushi/tagbar'
 Plugin 'tpope/vim-surround'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
-Plugin 'PotatoesMaster/i3-vim-syntax'
 Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'easymotion/vim-easymotion'
-Plugin 'tpope/vim-fugitive'
 
 " colors
-Plugin 'john2x/flatui.vim'
-Plugin 'sjl/badwolf'
-Plugin 'tomasr/molokai'
-Plugin 'altercation/vim-colors-solarized'
+Plugin 'noahfrederick/vim-hemisu'
+Plugin 'tpope/vim-vividchalk'
 Plugin 'nanotech/jellybeans.vim'
+Plugin 'vim-scripts/mayansmoke'
 Plugin 'morhetz/gruvbox'
-Plugin 'NLKNguyen/papercolor-theme'
 
 call vundle#end()
 filetype plugin indent on
+au FileType html setl sw=2 sts=2 et
+au FileType css setl sw=2 sts=2 et
 syntax on
 
 set t_Co=256
@@ -56,27 +55,27 @@ let g:airline_theme = 'powerlineish'
   endif
 
   " unicode symbols
-  "let g:airline_left_sep = '»'
-  "let g:airline_left_sep = '▶'
-  "let g:airline_right_sep = '«'
-  "let g:airline_right_sep = '◀'
-  "let g:airline_symbols.linenr = '␊'
-  "let g:airline_symbols.linenr = '␤'
-  "let g:airline_symbols.linenr = '¶'
-  "let g:airline_symbols.branch = '⎇'
-  "let g:airline_symbols.paste = 'ρ'
-  "let g:airline_symbols.paste = 'Þ'
-  "let g:airline_symbols.paste = '∥'
-  "let g:airline_symbols.whitespace = 'Ξ'
+  let g:airline_left_sep = '»'
+  let g:airline_left_sep = '▶'
+  let g:airline_right_sep = '«'
+  let g:airline_right_sep = '◀'
+  let g:airline_symbols.linenr = '␊'
+  let g:airline_symbols.linenr = '␤'
+  let g:airline_symbols.linenr = '¶'
+  let g:airline_symbols.branch = '⎇'
+  let g:airline_symbols.paste = 'ρ'
+  let g:airline_symbols.paste = 'Þ'
+  let g:airline_symbols.paste = '∥'
+  let g:airline_symbols.whitespace = 'Ξ'
 
   " powerline symbols
-  let g:airline_left_sep = ''
-  let g:airline_left_alt_sep = ''
-  let g:airline_right_sep = ''
-  let g:airline_right_alt_sep = ''
-  let g:airline_symbols.branch = ''
-  let g:airline_symbols.readonly = ''
-  let g:airline_symbols.linenr = ''
+  "let g:airline_left_sep = ''
+  "let g:airline_left_alt_sep = ''
+  "let g:airline_right_sep = ''
+  "let g:airline_right_alt_sep = ''
+  "let g:airline_symbols.branch = ''
+  "let g:airline_symbols.readonly = ''
+  "let g:airline_symbols.linenr = ''
 " }}}
 " }}}
 " Functions {{{
@@ -100,9 +99,10 @@ augroup END
 set encoding=utf-8
 set colorcolumn=80
 set background=light
-colorscheme PaperColor
+colorscheme mayansmoke
 set tabstop=4
 set shiftwidth=4
+set expandtab
 set mouse=a
 set nowrap
 set backspace=indent,eol,start
@@ -128,7 +128,12 @@ set smartcase
 
 set autoindent
 set scrolloff=4
- "" }}}
+
+" neovim
+if has('nvim')
+    set termguicolors
+endif
+"" }}}
 " Mappings {{{
 
 inoremap <leader><leader>  <Esc>l
@@ -173,19 +178,18 @@ nnoremap <leader>ez :vsplit ~/.zshrc<cr>4j
 " }}}
 " GUI {{{
 if has("gui_running")
-	set guifont=FiraMono\ 10
-	set background=light
-	colorscheme PaperColor
+	"set guifont=FiraMono\ 10
+	colorscheme mayansmoke
 	set lines=31 columns=81
-	let g:airline_theme = 'airlineish'
+	"let g:airline_theme = 'airlineish'
 
 	" powerline symbols
-	let g:airline_left_sep = ''
-	let g:airline_left_alt_sep = ''
-	let g:airline_right_sep = ''
-	let g:airline_right_alt_sep = ''
-	let g:airline_symbols.branch = ''
-	let g:airline_symbols.readonly = ''
-	let g:airline_symbols.linenr = ''
+	"let g:airline_left_sep = ''
+	"let g:airline_left_alt_sep = ''
+	"let g:airline_right_sep = ''
+	"let g:airline_right_alt_sep = ''
+	"let g:airline_symbols.branch = ''
+	"let g:airline_symbols.readonly = ''
+	"let g:airline_symbols.linenr = ''
 endif
 " }}}

@@ -5,20 +5,19 @@ alias ll='ls --color=auto -l -a -X'
 alias ..='cd ..'
 alias ....='cd ../..'
 
-alias vv='vim ~/.vimrc'
-alias vi3='vim ~/.i3/config'
-alias vz='vim ~/.zshrc'
-alias vi='vim'
-alias vza='vim ~/.zsh_aliases'
+alias vim='nvim'
+alias vv='nvim ~/.vimrc'
+alias vi3='nvim ~/.i3/config'
+alias vz='nvim ~/.zshrc'
+alias vza='nvim ~/.zsh_aliases'
 
-alias vx='vim ~/.Xdefaults'
+alias vx='nvim ~/.Xdefaults'
 alias xd='xrdb ~/.Xdefaults'
 
 alias dd='cd ~/Downloads'
 alias md='mkdir'
 alias e='exit'
 alias c='clear'
-alias r='ranger'
 
 alias debi='sudo dpkg -i'
 
@@ -33,4 +32,8 @@ alias pacser='sudo pacman -Ss'
 
 alias ycc='rm -rf /tmp/yaourt-tmp-anshul/*'
 
-alias gs='git status'
+alias gs='git status -sb'
+alias gl='git log --pretty=format:"%h - %an, %ar : %s"'
+
+alias tri="tree -I 'venv|*.egg*|__pycache__'"
+alias pyc='py.test --cov-report term-missing --cov=exch tests'
