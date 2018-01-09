@@ -67,8 +67,8 @@ colors
 setopt prompt_subst
 
 # prompt
-PROMPT='%B%F{yellow}%1~%f %F{magenta}$(_git_branch_name)
-→%b%f '
+PROMPT='%B%F{yellow}%2~%f %F{magenta}$(_git_branch_name)
+➡%b%f '
 
 #RPROMPT='%B%F{cyan}%b%f'
 

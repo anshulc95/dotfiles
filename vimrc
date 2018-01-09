@@ -13,7 +13,6 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 Plugin 'Raimondi/delimitMate'
-Plugin 'majutsushi/tagbar'
 Plugin 'tpope/vim-surround'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
@@ -23,12 +22,25 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'easymotion/vim-easymotion'
 
+Plugin 'tbastos/vim-lua'
+Plugin 'sheerun/vim-polyglot'
+
 " colors
 Plugin 'noahfrederick/vim-hemisu'
 Plugin 'tpope/vim-vividchalk'
 Plugin 'nanotech/jellybeans.vim'
 Plugin 'vim-scripts/mayansmoke'
 Plugin 'morhetz/gruvbox'
+Plugin 'baeuml/summerfruit256.vim'
+Plugin 'sjl/badwolf'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'cocopon/iceberg.vim'
+Plugin 'wombat256.vim'
+Plugin 'tomasr/molokai'
+Plugin 'kien/rainbow_parentheses.vim'
+Plugin 'mitsuhiko/vim-python-combined'
+Plugin 'nelstrom/vim-mac-classic-theme'
+Plugin 'dracula/vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -49,7 +61,7 @@ inoremap <F2> <esc>:NERDTreeToggle<cr>
 " Airline {{{
 set noshowmode
 set laststatus=2
-let g:airline_theme = 'powerlineish'
+let g:airline_theme = 'gruvbox'
   if !exists('g:airline_symbols')
 	let g:airline_symbols = {}
   endif
@@ -98,15 +110,16 @@ augroup END
 " Options {{{
 set encoding=utf-8
 set colorcolumn=80
-set background=light
-colorscheme mayansmoke
+
+colo molokai
+
 set tabstop=4
 set shiftwidth=4
 set expandtab
 set mouse=a
 set nowrap
 set backspace=indent,eol,start
-set listchars=tab:▸\ ,eol:¬,trail:■,extends:»,precedes:«
+set listchars=tab:▸\ ,trail:■,extends:»,precedes:«
 set list
 set noswapfile
 set nobackup
@@ -116,6 +129,7 @@ set rnu
 set foldenable
 set foldmethod=marker
 set cursorline
+hi CursorLine cterm=None
 set wildmenu
 set wildmode=longest:full
 au FocusLost * :wa " save when focus lost
@@ -132,6 +146,7 @@ set scrolloff=4
 " neovim
 if has('nvim')
     set termguicolors
+    set rtp^=/usr/share/vim/vimfiles/
 endif
 "" }}}
 " Mappings {{{
@@ -179,7 +194,8 @@ nnoremap <leader>ez :vsplit ~/.zshrc<cr>4j
 " GUI {{{
 if has("gui_running")
 	"set guifont=FiraMono\ 10
-	colorscheme mayansmoke
+	colorscheme dracula
+    let g:airline_theme = 'gruvbox'
 	set lines=31 columns=81
 	"let g:airline_theme = 'airlineish'
 
